@@ -1,0 +1,36 @@
+// @font-face {
+//   font-family: 'Gilmer';
+//   src: url(../../fonts/Gilmer-Heavy.otf);
+//   font-weight: 900;
+// }
+
+$main-font: 'Poppins', sans-serif;
+$black: #000;
+/*********************
+BREAKPOINTS
+*********************/
+
+ @mixin breakpoint($point) {
+  
+
+   @if $point == x-large { 
+    @media (max-width: 1650px) { @content ; }
+  }
+   @else if $point == large { 
+    @media (max-width: 1199px) { @content ; }
+  }
+   @else if $point == medium {
+     @media (max-width: 991px) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (max-width: 767px) { @content ; }
+  }
+   @else if $point == phoneH {
+     @media (max-width: 576px)  { @content ; }
+  }
+  @else if $point == phoneV {
+     @media (max-width: 460px)  { @content ; }
+
+  }
+}
+ 
