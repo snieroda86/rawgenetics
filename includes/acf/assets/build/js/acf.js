@@ -2093,7 +2093,7 @@
   acf.strSlugify = function (str) {
     return acf.strReplace('_', '-', str.toLowerCase());
   };
-  acf.strSanitize = function (str, toLowerCase = true) {
+  acf.strSanitize = function (str) {
     // chars (https://jsperf.com/replace-foreign-characters)
     var map = {
       À: 'A',
@@ -2338,9 +2338,7 @@
     str = str.replace(nonWord, mapping);
 
     // lowercase
-    if (toLowerCase) {
-      str = str.toLowerCase();
-    }
+    str = str.toLowerCase();
 
     // return
     return str;

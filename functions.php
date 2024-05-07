@@ -209,9 +209,9 @@ add_action( 'widgets_init', 'web14devsn_widgets_init' );
 function web14devsn_scripts() {
 	// Fonts
 	
-   wp_enqueue_style( 'poppins-google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins&display=swap', false );
+   wp_enqueue_style( 'inter-google-font', 'https://fonts.googleapis.com/css2?family=Inter:wght@400,600&display=swap', false );
 
-   wp_enqueue_style( 'lora-google-fonts', 'https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap', false );
+   wp_enqueue_style( 'space-grotesk-font', 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap', false );
 
    
 	wp_enqueue_style( 'web14devsn-style-bootstrap', get_template_directory_uri().'/bootstrap/css/bootstrap.min.css', array(), _S_VERSION );
@@ -292,27 +292,33 @@ function change_excerpt_more_sn($more) {
 */
 
 
-// if( function_exists('acf_add_options_page') ) {
+if( function_exists('acf_add_options_page') ) {
 
-//     acf_add_options_page(array(
-//         'page_title'    => 'Konfiguracja szablonu',
-//         'menu_title'    => 'Konfiguracja szablonu',
-//         'menu_slug'     => 'theme-general-settings-sn',
-//         'capability'    => 'edit_posts',
-//         'redirect'      => false
-//     ));
+    acf_add_options_page(array(
+        'page_title'    => 'Theme options',
+        'menu_title'    => 'Theme options',
+        'menu_slug'     => 'theme-general-settings-sn',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
 
-//     acf_add_options_sub_page(array(
-//         'page_title'    => 'Header',
-//         'menu_title'    => 'Header',
-//         'parent_slug'   => 'theme-general-settings-sn',
-//     ));
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Social media',
+        'menu_title'    => 'Social media',
+        'parent_slug'   => 'theme-general-settings-sn',
+    ));
 
-//     acf_add_options_sub_page(array(
-//         'page_title'    => 'Footer',
-//         'menu_title'    => 'Footer',
-//         'parent_slug'   => 'theme-general-settings-sn',
-//     ));
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Header',
+        'menu_title'    => 'Header',
+        'parent_slug'   => 'theme-general-settings-sn',
+    ));
 
-// }
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Footer',
+        'menu_title'    => 'Footer',
+        'parent_slug'   => 'theme-general-settings-sn',
+    ));
+
+}
 

@@ -1,4 +1,26 @@
 header#masthead{
+
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding-top: 15px; 
+
+    nav.navbar{
+
+        @media(min-width: 991px){
+
+            .navbar-collapse{
+                padding-left: 25px !important;    
+            }
+
+            .nav-link{ 
+                padding:8px 22px;  
+                font-weight: 600;
+                color: $black;
+            }
+        }
+    }
 	
   .search-box-h-wrapper{
 
@@ -37,7 +59,7 @@ header#masthead{
 
   		.web14-cart-count{
   			span{
-  				font-size: 14px;
+  				font-size: 14px; 
   			}
   		}
   	}

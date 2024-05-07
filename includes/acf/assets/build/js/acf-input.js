@@ -1171,6 +1171,7 @@
       // the field which we query against
       rule: {} // the rule [field, operator, value]
     },
+
     events: {
       change: 'change',
       keyup: 'change',
@@ -1537,6 +1538,7 @@
       // Reference used during "change" event.
       groups: [] // The groups of condition instances.
     },
+
     setup: function (field) {
       // data
       this.data.field = field;
@@ -1590,7 +1592,7 @@
 
       // loop
       this.getGroups().map(function (group) {
-        // ignore this group if another group passed
+        // igrnore this group if another group passed
         if (pass) return;
 
         // find passed
@@ -5436,9 +5438,6 @@
       if (changed) {
         this.prop('hidden', false);
         acf.doAction('show_field', this, context);
-        if (context === 'conditional_logic') {
-          this.setFieldSettingsLastVisible();
-        }
       }
 
       // return
@@ -5452,21 +5451,10 @@
       if (changed) {
         this.prop('hidden', true);
         acf.doAction('hide_field', this, context);
-        if (context === 'conditional_logic') {
-          this.setFieldSettingsLastVisible();
-        }
       }
 
       // return
       return changed;
-    },
-    setFieldSettingsLastVisible: function () {
-      // Ensure this conditional logic trigger has happened inside a field settings tab.
-      var $parents = this.$el.parents('.acf-field-settings-main');
-      if (!$parents.length) return;
-      var $fields = $parents.find('.acf-field');
-      $fields.removeClass('acf-last-visible');
-      $fields.not('.acf-hidden').last().addClass('acf-last-visible');
     },
     enable: function (lockKey, context) {
       // enable field and store result
@@ -6072,17 +6060,6 @@
     onChange: function () {
       // preview hack allows post to save with no title or content
       $('#_acf_changed').val(1);
-      if (acf.isGutenbergPostEditor()) {
-        try {
-          wp.data.dispatch('core/editor').editPost({
-            meta: {
-              _acf_changed: 1
-            }
-          });
-        } catch (error) {
-          console.log('ACF: Failed to update _acf_changed meta', error);
-        }
-      }
     }
   });
   var duplicateFieldsManager = new acf.Model({
@@ -8041,7 +8018,6 @@
       ajaxResults: function (json) {
         return json;
       },
-      escapeMarkup: false,
       templateSelection: false,
       templateResult: false,
       dropdownCssClass: '',
@@ -8302,12 +8278,17 @@
         allowClear: this.get('allowNull'),
         placeholder: this.get('placeholder'),
         multiple: this.get('multiple'),
-        escapeMarkup: this.get('escapeMarkup'),
         templateSelection: this.get('templateSelection'),
         templateResult: this.get('templateResult'),
         dropdownCssClass: this.get('dropdownCssClass'),
         suppressFilters: this.get('suppressFilters'),
-        data: []
+        data: [],
+        escapeMarkup: function (markup) {
+          if (typeof markup !== 'string') {
+            return markup;
+          }
+          return acf.escHtml(markup);
+        }
       };
 
       // Clear empty templateSelections, templateResults, or dropdownCssClass.
@@ -8326,7 +8307,7 @@
         if (!options.templateSelection) {
           options.templateSelection = function (selection) {
             var $selection = $('<span class="acf-selection"></span>');
-            $selection.html(options.escapeMarkup(selection.text));
+            $selection.html(acf.escHtml(selection.text));
             $selection.data('element', selection.element);
             return $selection;
           };
@@ -8334,19 +8315,6 @@
       } else {
         delete options.templateSelection;
         delete options.templateResult;
-      }
-
-      // Use a default, filterable escapeMarkup if not provided.
-      if (!options.escapeMarkup) {
-        options.escapeMarkup = function (markup) {
-          if (typeof markup !== 'string') {
-            return markup;
-          }
-          if (this.suppressFilters) {
-            return acf.strEscape(markup);
-          }
-          return acf.applyFilters('select2_escape_markup', acf.strEscape(markup), markup, $select, this.data, field || false, this);
-        };
       }
 
       // multiple

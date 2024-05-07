@@ -1,1 +1,58 @@
-  
+footer.site-footer{
+
+	a{
+		color: $green; 
+	}
+	.contact-info-widget{
+		font-weight: 500;
+
+		a{
+			text-decoration: underline;
+			font-weight: 600;  
+		}
+	}
+
+    h2.widget-title{
+    	font-size: 18px;
+    	padding-bottom: 15px;
+    	color: $green;
+    }
+
+    ul,ol{
+    	list-style: none;
+    	padding:0;
+    	margin:0;
+    	li{
+    		padding-bottom: 7px;
+    		a{
+    			color: $black;
+    			
+
+    		}
+    	}
+    }
+    ul.sub-menu{
+    	// padding-left: 15px;
+    	padding-top: 5px;
+
+    	li{
+    		padding-bottom: 3px;
+    		a{
+    			color: #888;
+    			font-size: 15px;
+    		}
+    	}
+    }
+
+    .social-media-w-area{
+    	display: flex;
+    	padding-top: 10px;
+    	a{
+    		display: block;
+    		margin-right: 15px;
+    	}
+    	svg{
+    		height: 22px;
+    	}
+    }
+}  

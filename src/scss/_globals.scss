@@ -6,21 +6,30 @@ body{
   overflow-x: hidden;
 }
 
+
+main#primary{
+  min-height: 100vh;
+}
 .container-lg{
   max-width: 1440px !important;
 }
 a{
   text-decoration: none; 
 }
+h1,h2,h3,h4,h5,h6{
+  font-family: $heading-font;
+}
 
-
-h1,h2,h3,h4,h5,h6,p,input,li,button,span,a,strong,table,th,td{
-  font-family: $main-font;
-  padding:0;
-  margin:0;
+p,input,li,button,span,a,strong,table,th,td{
+  font-family: $body-font;
+  // padding:0;
+  // margin:0;
 }
 h1,h2 , h3 ,h4{  
   font-weight: 600; 
+}
+p{
+  margin-bottom: 10px;
 }
 
 
@@ -51,6 +60,7 @@ h3{
   border: 1px solid $black !important;
   border-radius: 10px !important;
   padding:7px 24px 7px 20px !important; 
+  font-family: $body-font !important;
 }
 .dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp button.dgwt-wcas-search-submit{
   right:11px !important;
@@ -63,4 +73,8 @@ h3{
 }
 .dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp{
   padding:0;
+}
+
+.dgwt-wcas-style-pirx .dgwt-wcas-preloader{
+  margin-right: 10px !important;
 }

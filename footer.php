@@ -18,9 +18,9 @@
 
 			
 			<!-- Widget area -->
-			<div class="row widget-area-footer-sn">
+			<div class="row widget-area-footer-sn gy-4">
 				<!-- Widget -->
-				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+				<div class="col-lg-6 col-md-4 col-sm-6 col-12 contact-info-widget">
 					<div class="widget-item-footer mb-3">
 						<?php if ( is_active_sidebar( 'f-widget-1' ) ) { ?>
 						    <aside>
@@ -28,10 +28,29 @@
 						    </aside>
 						<?php } ?>
 					</div>
+
+					<!-- social media -->
+					<?php
+
+					if( have_rows('social_media_sn' , 'option') ): ?>
+						<div class="widget-item-footer mb-3 social-media-w-area">
+							<?php
+						    while( have_rows('social_media_sn' , 'option') ) : the_row();
+						        $sm_svg_icon = get_sub_field('sm_svg_icon');
+						        $sm_channel_url = get_sub_field('sm_channel_url');
+						        ?>
+						        <a href="<?php echo esc_url($sm_channel_url); ?>" <?php echo( get_field('sm_target_blank','option')) ? ' target="_blank" ' :''; ?>>
+						        	<?php echo $sm_svg_icon; ?>
+						        </a>
+
+						    <?php endwhile; ?>
+						</div>
+					<?php endif; ?>
+					
 				</div>
 				<!-- Widget end -->
 				<!-- Widget -->
-				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+				<div class="col-lg-2 col-md-4 col-sm-6 col-12">
 					<div class="widget-item-footer mb-3">
 						<?php if ( is_active_sidebar( 'f-widget-2' ) ) { ?>
 						    <aside>
@@ -42,11 +61,22 @@
 				</div>
 				<!-- Widget end -->
 				<!-- Widget -->
-				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
+				<div class="col-lg-2 col-md-4 col-sm-6 col-12">
 					<div class="widget-item-footer mb-3">
 						<?php if ( is_active_sidebar( 'f-widget-3' ) ) { ?>
 						    <aside>
 						        <?php dynamic_sidebar('f-widget-3'); ?>
+						    </aside>
+						<?php } ?>
+					</div>
+				</div>
+				<!-- Widget end -->
+				<!-- Widget -->
+				<div class="col-lg-2 col-md-4 col-sm-6 col-12">
+					<div class="widget-item-footer mb-3">
+						<?php if ( is_active_sidebar( 'f-widget-4' ) ) { ?>
+						    <aside>
+						        <?php dynamic_sidebar('f-widget-4'); ?>
 						    </aside>
 						<?php } ?>
 					</div>
