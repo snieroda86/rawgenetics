@@ -13,7 +13,7 @@ get_header();
 
 <main id="primary" class="site-main">
     
-        <?php  // get_template_part('template-parts/home/main-slider'); ?>
+        <?php  get_template_part('template-parts/home/main-slider'); ?>
         <?php  // get_template_part('template-parts/home/features-bar'); ?>
         <?php  // get_template_part('template-parts/home/recent-products'); ?>
         <?php  // get_template_part('template-parts/home/about'); ?>
@@ -26,17 +26,24 @@ get_header();
 
 <script type="text/javascript">
   
-    // jQuery(document).ready(function($){
+     jQuery(document).ready(function($){
+
+        // Cannabis parallax
+        var scene1 = document.getElementById('scene-sn-1');
+        var parallaxInstance = new Parallax(scene1);
+
+
+
     //     // main-slider-sn
-    //     $('.main-slider-sn').slick({
-    //       dots: false,
-    //       infinite: true,
-    //       speed: 500,
-    //       fade: true,
-    //       cssEase: 'linear' ,
-    //       prevArrow: $('.ms-prev'),
-    //       nextArrow: $('.ms-next'),
-    //     });
+        $('.main-slider-sn').slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+          speed: 200,
+          fade: true,
+          cssEase: 'linear',
+          appendDots: $('.main-slider-sn-wrapper')
+        });
 
     //     // Recommended products slider
 
@@ -135,7 +142,7 @@ get_header();
             
     //       ]
     //     });
-    // });
+    });
 </script>
 <?php
 get_footer();

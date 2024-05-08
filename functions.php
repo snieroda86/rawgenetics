@@ -213,7 +213,8 @@ function web14devsn_scripts() {
 
    wp_enqueue_style( 'space-grotesk-font', 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap', false );
 
-   
+   wp_enqueue_style( 'permanent-marker-font', 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap', false );
+
 	wp_enqueue_style( 'web14devsn-style-bootstrap', get_template_directory_uri().'/bootstrap/css/bootstrap.min.css', array(), _S_VERSION );
 	
 	wp_enqueue_style( 'web14devsn-style-slick',get_template_directory_uri().'/plugins/slick-slider/slick.css', array(), _S_VERSION );
@@ -226,6 +227,7 @@ function web14devsn_scripts() {
 
 	wp_enqueue_script( 'web14devsn-js-slick',get_template_directory_uri().'/plugins/slick-slider/slick.min.js', array("jquery"), _S_VERSION , true);
 
+	wp_enqueue_script( 'web14devsn-js-parallax', 'https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js' , array("jquery"), _S_VERSION, true);
 
 	wp_enqueue_script( 'web14devsn-main-js', get_template_directory_uri() . '/dist/js/main.js', array("jquery"), _S_VERSION, true );
 

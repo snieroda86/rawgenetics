@@ -1,1 +1,112 @@
- 
+.main-slider-sn-wrapper{
+	position: relative;
+
+	.main-slider-bg{
+
+	}
+
+	.main-slider-row{
+		position: absolute;
+		top:40px;
+		left:0;
+		right:0;
+
+		.main-slider-right-col{
+			
+			img.cannabis-move-img{
+				max-width: 120%;
+				margin-left: -10%;
+				
+			}
+		}
+
+		.main-slider-container{
+			padding:80px 15px 40px 80px; 
+
+			@include breakpoint('large'){
+				padding:60px 15px 15px 40px;	
+			}
+
+			@include breakpoint('medium'){
+				padding:30px 15px 15px 40px;	
+			}
+
+			@include breakpoint('tablet'){
+				padding:10px 0 0 40px;	
+			}
+
+			@include breakpoint('phoneH'){
+				padding:0 0 0 25px;	
+			}
+
+			.main-slider-sn{
+
+				.m-slider-text-area{
+					h1,span{
+						font-size: 70px;
+						white-space: nowrap;
+						color:#fff;
+						font-family: $permanent-font; 
+
+						@include breakpoint('large'){
+							font-size:50px;
+						}
+
+						@include breakpoint('medium'){
+							font-size:40px;
+						}
+
+						@include breakpoint('tablet'){
+							font-size:30px;
+						}
+
+						@include breakpoint('phoneV'){
+							font-size:20px; 
+						}
+					}
+					h1{
+						line-height: 100%; 
+					}
+					span{
+						-webkit-text-stroke: 0.3px #fff !important;
+  						-webkit-text-fill-color: #000;
+					}
+
+					p{
+						color: #fff;
+						font-size: 18px;
+					}
+
+					@include breakpoint('tablet'){
+						& > div{
+							display: none;
+						}
+					}
+				}
+
+			}
+		}
+
+
+		.main-slider-right-col{
+			position: relative;
+
+			img.dots-move-img{
+				top:50px !important;
+
+				@include breakpoint('tablet'){
+					display: none !important;
+				}
+			}
+		}
+
+
+	}
+
+	ul.slick-dots{
+		position: absolute;
+		right:70px;
+		bottom:50px; 
+		justify-content: flex-end !important;
+	}
+} 
