@@ -1,1 +1,37 @@
- 
+.added_to_cart.wc-forward, .woocommerce span.onsale{
+	display: none !important; 
+} 
+
+span.price{
+	font-weight: 400;
+	font-family: $body-font !important;
+	margin-bottom: 16px;
+	del{
+		color:#9D9D9D;
+	}
+	ins{
+		text-decoration: none;  
+
+	}
+}
+
+a.add_to_cart_button , .add_to_cart_button , li.product .add_to_cart_button , li.product a.button{
+  @include el-center;
+  background: $green !important;
+  height: 48px;
+  color:#fff !important;
+  min-width: 150px;
+  padding:4px 15px 4px 35px;
+  border-radius: 8px;
+  font-weight: 600;
+  max-width: 165px;
+  position: relative;
+  white-space: nowrap;
+
+  &::before{
+  	content:url(../../uploads/cart_white.png);
+  	position: absolute;
+  	left:20px;
+  }
+
+}
