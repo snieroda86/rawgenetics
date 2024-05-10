@@ -5,7 +5,21 @@
 		<div class="onsale-products-sn-wrapper d-flex flex-wrap">
 
 			<div class="onsale-products-ftr-box">
-				FRT box
+				<div class="onsale-ftr-inner" style="background-image: url(<?php echo PATH_SN ?>/uploads/sale-ftr-box-cr.png);background-repeat: no-repeat;background-size: cover;">
+					<div class="box-text-vertical">
+						<div class="text-v-item">
+							<h3 class="vertical-head-1">new products drop</h3>
+						</div>
+						<div class="text-v-item">
+							<h3 class="vertical-head-2">new products drop</h3>
+						</div>
+					</div>
+					<div class="box-text-desc">
+						<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua</p>
+					</div>
+
+				</div>
 			</div>
 
 			<div class="onsale-carousel-container">
