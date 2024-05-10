@@ -15,9 +15,10 @@ get_header();
     
         <?php  get_template_part('template-parts/home/main-slider'); ?>
         <?php  get_template_part('template-parts/home/recommended-products-slider'); ?>
-        <?php  // get_template_part('template-parts/home/features-bar'); ?>
+        <?php  get_template_part('template-parts/home/product-info'); ?>
+        <?php  get_template_part('template-parts/home/about'); ?>
         <?php  // get_template_part('template-parts/home/recent-products'); ?>
-        <?php  // get_template_part('template-parts/home/about'); ?>
+        
         
         <?php  // get_template_part('template-parts/home/bestsellers'); ?>
         <?php  // get_template_part('template-parts/home/blog-posts'); ?>
@@ -31,7 +32,11 @@ get_header();
 
         // Cannabis parallax
         var scene1 = document.getElementById('scene-sn-1');
-        var parallaxInstance = new Parallax(scene1);
+        var parallaxInstance1 = new Parallax(scene1);
+
+        // Cloud parallax
+        var scene2 = document.getElementById('scene-sn-2');
+        var parallaxInstance2 = new Parallax(scene2);
 
 
 

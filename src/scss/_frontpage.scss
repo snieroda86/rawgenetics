@@ -321,7 +321,105 @@
 
 	  	
 	}
+	
+}
 
+// Product info boxes section
+.product-info-box{
+	min-height: 346px;
+	padding:50px; 
+	box-shadow: 0px 0px 62px -24px rgba(31, 31, 37, 1);
+	display: flex;
+	align-items: center;
+
+	p{
+
+	} 
+	h2{
+		font-size: 40px;
+		font-family: $permanent-font;
+		padding-bottom: 15px;
+
+		@include breakpoint('medium'){
+			font-size: 35px;
+		}
+		@include breakpoint('tablet'){
+			font-size: 30px;
+		}
+		@include breakpoint('phoneH'){
+			font-size: 28px;
+		}
+	}
+	a.btn-main-web14{
+		max-width: 165px;
+	}
+}
+
+// About us
+.section-about{
+	padding-top: 180px;
+}
+.sec-about-desc{
 	
-	
+	h2{
+		font-size: 46px;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding-bottom: 5px;
+	}
+	h3{
+		color: $red;
+		font-family: $permanent-font;
+		font-size: 40px;
+		padding-bottom: 30px;
+	}
+	p{
+		padding-bottom: 35px;
+	}
+}
+
+.sec-about-icons{
+
+	#scene-sn-2{
+		position: absolute !important;
+		top:-110px;
+		z-index: -1;
+		img{
+			max-width:120%;
+			margin-left: -160px;
+
+		}
+	}
+
+	.about-icons-container{
+
+		.icon-row-item{
+			border-bottom: 1px solid #B1B1B1;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+
+			.icon-item-icon{
+				width:105px;
+
+				.icon-item-circle{
+					@include el-center;
+					width:75px;
+					height: 75px;
+					border-radius: 50%;
+					background-color: #fff; 
+					border:1px solid #B1B1B1;
+				}
+			}
+			.icon-item-label{
+				width:calc(100% - 105px);
+				display: flex;
+				align-items: center;
+
+				h3{
+					color: $black;
+					font-size: 21px;
+				}
+			}
+		}
+	}
 }
