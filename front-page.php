@@ -17,7 +17,7 @@ get_header();
         <?php  get_template_part('template-parts/home/recommended-products-slider'); ?>
         <?php  get_template_part('template-parts/home/product-info'); ?>
         <?php  get_template_part('template-parts/home/about'); ?>
-        <?php  // get_template_part('template-parts/home/recent-products'); ?>
+        <?php  get_template_part('template-parts/home/recent-products'); ?>
         
         
         <?php  // get_template_part('template-parts/home/bestsellers'); ?>

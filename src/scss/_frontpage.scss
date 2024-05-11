@@ -237,6 +237,10 @@
 						position: relative;
 						z-index: 3;
 					}
+
+					h4.product-loop-cat-name{
+						display: none !important;
+					}
 				}
 			}
 			li{
@@ -421,5 +425,37 @@
 				}
 			}
 		}
+	}
+}
+
+// Recent products
+.section-recent-products{
+	margin-top: 70px;
+	padding-bottom: 100px;
+
+	ul.products li.product{
+		border-radius: 0 !important;
+	}
+
+	.arrows-down-green{
+		position: absolute;
+		left:0;
+		bottom:200px;
+		transform: translateX(-50%);
+
+	}
+
+	.container-lg{
+		position: relative;
+		z-index: 2;
+	}
+
+}
+.section-header{
+	padding-top:220px;
+
+	h2.section-title-sn{
+		font-family: $permanent-font;
+		font-size: 40px; 
 	}
 }
