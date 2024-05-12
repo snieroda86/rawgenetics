@@ -14,10 +14,12 @@ body{
 section{
   position: relative;
 }
-
+.font-permanent{
+  font-family: $permanent-font; 
+}
 
 main#primary{
-  min-height: 100vh;
+  min-height: 100vh; 
   padding-top: 140px;  
 }
 .container-lg{
@@ -140,6 +142,17 @@ h3{
   &:hover{
     background: #fff;
     color: $black;
+  }
+}
+
+.btn-main-web14.btn-border-green-sn{
+  background: transparent;
+  border:2px solid $green;  
+  color: $green;
+
+  &:hover{
+    background: $green;
+    color: #fff;
   }
 }
 

@@ -51,16 +51,6 @@
                 <div class="post-excerpt-sn">
                     <?php the_excerpt(); ?>
                 </div>
-
-                <div class="more-link-sn-wrapper">
-                    <a href="<?php echo the_permalink(); ?>">
-                        <p class="more-link-sn">
-                            <?php _e('Czytaj więcej' , 'web14devsn'); ?>
-                        </p>
-                    </a>
-                </div>
-                
-
             </div>
         </div>
     </section>

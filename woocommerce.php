@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <main id="primary" class="site-main">
-    <div class="<?php  echo( is_product() ) ? 'full-container-sn' : ' container-lg '; ?> page-container-sn woocommerce-sn">
+    <div class="container-lg">
         <div class="row">
             <?php
 
@@ -18,11 +18,12 @@ get_header(); ?>
                 
                 ?>
                 <div class="shop-sidebar-sn">
+                    <h4>Categories list</h4>
                     <?php // echo do_shortcode('[categories_sidebar_sn]'); ?>
                 </div>
             <?php endif; ?>
 
-            <div class="<?php echo is_shop() || is_product_category() ? 'slider-home-col' : 'col-12'; ?>">
+            <div class="<?php echo is_shop() || is_product_category() ? 'shop-content-sn' : 'col-12'; ?>">
                 <?php woocommerce_content(); ?>
             </div>
         </div>

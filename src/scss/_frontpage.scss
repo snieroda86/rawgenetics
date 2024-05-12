@@ -459,3 +459,19 @@
 		font-size: 40px; 
 	}
 }
+
+// Blog section
+.section-post-grid{
+	.blog-posts-container{
+		z-index: 2;
+	}
+}
+.cloud-post-grid-bg{
+	position: absolute; 
+	left:-100px;
+	top:0;
+
+	img{
+
+	}
+}
