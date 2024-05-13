@@ -19,10 +19,9 @@ get_header();
         <?php  get_template_part('template-parts/home/about'); ?>
         <?php  get_template_part('template-parts/home/recent-products'); ?>
         <?php  get_template_part('template-parts/home/blog-posts'); ?>
-        
+        <?php  get_template_part('template-parts/newsletter'); ?>
         <?php  // get_template_part('template-parts/home/bestsellers'); ?>
         
-
 </main><!-- #main -->
 
 
@@ -38,12 +37,17 @@ get_header();
         var scene2 = document.getElementById('scene-sn-2');
         var parallaxInstance2 = new Parallax(scene2);
 
+        // Post grid cloud parallax
+        var scene3 = document.getElementById('scene-sn-3');
+        var parallaxInstance3 = new Parallax(scene3);
 
 
     //     // main-slider-sn
         $('.main-slider-sn').slick({
           dots: true,
           arrows: false,
+          autoplay: true,
+          pauseOnHover : false ,
           infinite: true,
           speed: 200,
           fade: true,

@@ -101,5 +101,26 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+    $(window).scroll(function() {
+        var header = document.getElementById('masthead');
+        var scrollPosition = window.scrollY;
+        var logo = document.querySelector('.custom-logo');
+
+        if (scrollPosition > 0) {
+            header.classList.add('header-scrolled');
+            logo.style.width = 70 + 'px';
+        } else {
+            header.classList.remove('header-scrolled');
+            logo.style.width = 100 + '%';
+
+        }
+    });
+});
+
+	
+</script>
+
 </body>
 </html>

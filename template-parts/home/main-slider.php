@@ -60,7 +60,7 @@
 							</div>
 							<div class="col-3 col-lg-5">
 								<div class="main-slider-right-col" id="scene-sn-1">
-									<img data-depth="0.2" class="img-fluid selectDisable cannabis-move-img" src="<?php echo PATH_SN ?>/uploads/cannabis-leaf-small.png" alt="Cannabis">	
+									<img data-depth="0.3" class="img-fluid selectDisable cannabis-move-img" src="<?php echo PATH_SN ?>/uploads/cannabis-leaf-small.png" alt="Cannabis">	
 									<!-- Dots -->
 									<img data-depth="-0.1" class="img-fluid selectDisable dots-move-img" src="<?php echo PATH_SN ?>/uploads/slider-dots.png" alt="Dots">
 								</div>

@@ -4,11 +4,17 @@ html {
 
 body{
   overflow-x: hidden;
+  background: url(../../uploads/body_bg.svg);
+  background-size: cover;
+  background-attachment: fixed;
 
   *{
-    transition: 0.3s;    
+    transition: 0.3s;      
   }
   
+}
+.border-none{
+  border:none !important;
 }
 
 section{
@@ -69,6 +75,13 @@ h3{
 }
 .pt-100{
   padding-top:100px; 
+}
+
+.pb-80{
+  padding-bottom:80px;
+}
+.pb-100{
+  padding-bottom:100px; 
 }
 
 .selectDisable , img { 

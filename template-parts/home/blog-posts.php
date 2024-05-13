@@ -65,8 +65,8 @@
             </div>
 
             <!-- Cloud image -->
-            <div class="cloud-post-grid-bg">
-            	<img class="img-fluid" src="<?php echo PATH_SN  ?>/uploads/cloud_blog.png" alt="Cloud">
+            <div class="cloud-post-grid-bg" id="scene-sn-3">
+            	<img class="img-fluid" data-depth="0.1" src="<?php echo PATH_SN  ?>/uploads/cloud_blog.png" alt="Cloud">
             </div>
          	
 	</div>
