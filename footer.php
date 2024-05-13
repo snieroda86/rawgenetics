@@ -84,14 +84,18 @@
 				<!-- Widget end -->
 			</div>
 			<!-- Copyrights -->
-			<div class="row copyr-row-sn pt-5">
+			<div class="row copyr-row-sn mt-5 gy-3">
 
-				<div class="col-12">
+				<div class="col-sm-6">
 					
-					<p class="py-3 footer-text">
-						<span><?php echo date('Y') ?></span> © <span> Rosfix</span> | 
+					<p class="p-0 m-0 pb-3 footer-text text-center text-sm-start">
+						<span>© </span><span><?php echo date('Y') ?></span> <span> Raw Genetics. All rights reserved. </span> 
 					</p>
 					
+				</div>
+
+				<div class="col-sm-6">
+					<p class="text-sm-end text-center p-0 m-0 pb-3">Created and managed by <span class="text-green"><a target="_blank" href="https://crewint.org"><b>Crew International.</b></a></span></p>
 				</div>
 				
 			</div>

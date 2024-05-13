@@ -132,10 +132,25 @@ add_action( 'after_setup_theme', 'web14devsn_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function web14devsn_widgets_init() {
+
+	// Blog sidebar
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'web14devsn' ),
+			'name'          => esc_html__( 'Blog sidebar', 'web14devsn' ),
 			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'web14devsn' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+	// Shop sidebar
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Shop sidebar', 'web14devsn' ),
+			'id'            => 'sidebar-shop',
 			'description'   => esc_html__( 'Add widgets here.', 'web14devsn' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -242,6 +257,7 @@ add_filter( 'use_widgets_block_editor', '__return_false' );
 
 /* Woocommerce customization*/
 require_once get_template_directory() . '/includes/woocommerce/WC_Product_SN.php';
+require_once get_template_directory() . '/includes/woocommerce/WC_Archive_SN.php';
 
 /**
  * Register Custom Navigation Walker
