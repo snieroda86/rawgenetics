@@ -109,4 +109,43 @@ li.product a.button.added::before , li.product a.button.loading::before{
 	
 }
 
- 
+.woocommerce-pagination{
+	  ul{
+	  	border:0 !important; 
+	  	li{
+	  		border:0 !important;
+
+	  		span,a{
+	  			background: transparent !important;
+	  			color: #000;
+	  			font-size: 16px !important;
+	  			font-weight: 600 !important;
+	  		}
+
+	  		a.next , a.prev{
+	  			display: flex !important;
+	  			align-items: center;
+	  			border:1px solid #000;
+	  			border-radius: 4px;
+	  			padding:8px 10px !important;
+	  		}
+
+	  		span.current{
+	  			color: $green !important;
+	  		}
+	  	}
+	  }
+}
+
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content{
+	background-color: #b9b9b9;
+}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle , .woocommerce .widget_price_filter .ui-slider .ui-slider-range{
+	background-color: $red !important; 
+}
+
+.woocommerce .widget_price_filter .price_slider_amount .button{
+	background: $green;
+	color: #fff;
+}

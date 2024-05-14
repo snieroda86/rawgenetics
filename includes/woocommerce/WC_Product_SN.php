@@ -7,6 +7,7 @@ if(!class_exists('WC_Product_SN')){
 
 		public function __construct(){
 			add_action('woocommerce_shop_loop_item_title' , array( $this , 'show_category_on_product_loop'), 20, 1);
+			
 		}
 
 		/*
@@ -22,6 +23,7 @@ if(!class_exists('WC_Product_SN')){
                 }
             }
 		}
+
 	}
 
 	$WC_Product_SN = new WC_Product_SN();

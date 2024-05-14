@@ -11,7 +11,7 @@
 
 ?>		
 						
-	
+	<?php  get_template_part('template-parts/newsletter'); ?>
 	<footer id="colophon" class="site-footer">
 		
 		<div class="container-lg footer-container-sn">

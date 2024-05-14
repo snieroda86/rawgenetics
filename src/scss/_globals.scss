@@ -19,6 +19,7 @@ body{
 
 section{
   position: relative;
+  z-index: 1;
 }
 .font-permanent{
   font-family: $permanent-font; 
@@ -27,6 +28,7 @@ section{
 main#primary{
   min-height: 100vh; 
   padding-top: 140px;  
+  position: relative;
 }
 .container-lg{
   max-width: 1440px !important;
@@ -82,6 +84,20 @@ h3{
 }
 .pb-100{
   padding-bottom:100px; 
+}
+
+.side-arrow-left{
+  position: absolute;
+  top:70vh;
+  left:0;
+  transform: translateX(-40%);
+}
+
+.side-arrow-right{
+  position: absolute;
+  top:150vh;
+  right:0;
+  transform: translateX(40%);
 }
 
 .selectDisable , img { 

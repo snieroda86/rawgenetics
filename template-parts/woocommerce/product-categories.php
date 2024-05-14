@@ -1,22 +1,20 @@
 <?php 
 
-  $args = array(
-          'taxonomy' => 'product_cat',
-          'hide_empty' => false,
-          'parent'   => 0
-      );
-  $product_cat = get_terms( $args );
+$args = array(
+      'taxonomy' => 'product_cat',
+      'hide_empty' => false,
+      'parent'   => 0
+  );
+$product_cat = get_terms( $args );
 
-  ?>
+?>
 
-  <?php if( !empty($product_cat)): ?>
-    <section>
-        <h2 class="widget-title font-permanent">
-            <?php _e('Categories' , 'web14devsn'); ?>
-        </h2>
-    </section>
-
-  <div id="accordion-p-categories" class="accordion-transparent">
+<?php if( !empty($product_cat)): ?>
+<section class="widget">
+    <h2 class="widget-title font-permanent">
+        <?php _e('Categories' , 'web14devsn'); ?>
+    </h2>
+    <div id="accordion-p-categories" class="accordion-transparent accordion">
        <?php foreach($product_cat as $parent_product_cat) : ?>
         <?php $termchildren = get_term_children( $parent_product_cat->term_id, 'product_cat' ); ?>
         <div class="card">
@@ -29,8 +27,10 @@
                         <div class="angle-dropdown-cat">
                             <?php if (!empty($termchildren)): ?>
                                 <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#prod-category-sn-<?php echo $parent_product_cat->term_id; ?>" aria-expanded="true" aria-controls="prod-category-sn-<?php echo $parent_product_cat->term_id; ?>">
-                                    <img style="height: 12px;" src="<?php echo PATH_SN ?>/uploads/angle-down.svg"  alt="angle">
+                                    <img class="accordion-item-arow" style="height: 12px;" src="<?php echo PATH_SN ?>/uploads/angle-down.svg"  alt="angle">
                                 </button>
+                            <?php else: ?>
+                                <div class="arrow-none-cat"></div>
                             <?php endif; ?>
                         </div>
                     </span>
@@ -58,6 +58,15 @@
             </div>
             <?php endif; ?>
         </div>
-    <?php endforeach; ?>
-  </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 <?php endif; ?>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $('.accordion .btn-link').on('click', function(){
+    $(this).find('.accordion-item-arow').toggleClass('item-expanded');
+  });
+});
+</script>
