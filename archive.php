@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying arvhive pages
+ * The template for displaying post archive pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -13,15 +13,14 @@ get_header();
 	<main id="primary" class="site-main section-bg-grey">
 
 		<div class="container-lg">
+			<?php  get_template_part('template-parts/global/page-breadcrumb'); ?>
 			<header class="page-header cat-header-sn">
-				<?php
-				if (is_category()) {
-				    echo '<h1 class="page-title">' . single_cat_title('', false) . '</h1>';
-				}
-				?>
-				
+				<h1 class="page-title"><?php single_post_title(); ?></h1>
 			</header><!-- .page-header -->
-			
+
+			<!-- Categories filter -->
+        	<?php  get_template_part('template-parts/global/categories-filter'); ?>
+
 			<?php if ( have_posts() ) : ?>
 				<div class="row post-grid-row-sn">
 					<?php

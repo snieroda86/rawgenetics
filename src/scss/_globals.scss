@@ -25,6 +25,13 @@ section{
   font-family: $permanent-font; 
 }
 
+.page-breadcrumbs-sn{
+  padding: 15px 0 5px 0;
+  a,p,span{
+    color:#5D5D5D !important;
+  }
+}
+
 main#primary{
   min-height: 100vh; 
   padding-top: 140px;  
@@ -183,6 +190,12 @@ h3{
     background: $green;
     color: #fff;
   }
+}
+
+.no-border-btn{
+  border: 2px solid #ddd;
+  background: transparent;
+  color: $black;
 }
 
 // Slider dots
