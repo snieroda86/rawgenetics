@@ -10,6 +10,8 @@
 get_header(); ?>
 
 <main id="primary" class="site-main">
+    <?php  get_template_part('template-parts/global/side-arrows'); ?>
+
     <div class="container-lg">
         <div class="row">
             <div class="woocommerce-page-header-sn">
@@ -50,36 +52,42 @@ get_header(); ?>
 
                 <?php endif; ?>
                 <!-- Shop banner -->
-                <div class="shop-info-banner" style="background-image: url(<?php echo PATH_SN ?>/uploads/shop-banner-bg.jpg);background-size: cover;background-position: center;">
-                    <div class="shop-info-banner-inner">
-                        <div class="d-flex">
-                            <div class="shop-info-banner-num">
-                                <div class="sib-circle">
-                                    <div class="sib-num">
-                                        <span class="sib-percentage">-50%</span>
+                <?php if( is_shop()): ?>
+                    <div class="shop-info-banner" style="background-image: url(<?php echo PATH_SN ?>/uploads/shop-banner-bg.jpg);background-size: cover;background-position: center;">
+                        <div class="shop-info-banner-inner">
+                            <div class="d-flex">
+                                <div class="shop-info-banner-num">
+                                    <div class="sib-circle">
+                                        <div class="sib-num">
+                                            <span class="sib-percentage">-50%</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="shop-info-banner-text d-flex align-items-center">
-                                <div>
-                                    <h2 class="text-white font-permanent">All Seeds are considered HEMP Seeds by law. Every seed tested contained less than 0.03% THC</h2>
-                                    <?php if( is_product_category()): ?>
-                                        <?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
-                                        <a class="btn-main-web14 btn-border-sn" href="<?php echo $shop_page_url ?>">
-                                            <?php _e('All products' , 'web14devsn'); ?>
-                                        </a>
-                                    <?php endif; ?>
+                                <div class="shop-info-banner-text d-flex align-items-center">
+                                    <div>
+                                        <h2 class="text-white font-permanent">All Seeds are considered HEMP Seeds by law. Every seed tested contained less than 0.03% THC</h2>
+                                        <?php if( is_product_category()): ?>
+                                            <?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
+                                            <a class="btn-main-web14 btn-border-sn" href="<?php echo $shop_page_url ?>">
+                                                <?php _e('All products' , 'web14devsn'); ?>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endif; ?>
 
                 <?php woocommerce_content(); ?>
             </div>
         </div>
     </div>
+
+    <?php if( is_product() ): ?>
+        <?php  get_template_part('template-parts/home/blog-posts'); ?>
+    <?php endif; ?>
 </main><!-- #main -->
 
 <?php get_footer();

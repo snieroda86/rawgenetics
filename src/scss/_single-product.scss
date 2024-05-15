@@ -1,0 +1,120 @@
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images{
+	width:35%;
+
+	@include breakpoint('tablet'){
+		width:100%;
+	}
+}
+
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary{
+	width:61%;
+	@include breakpoint('tablet'){
+		width:100%;
+	}
+}
+
+.woocommerce div.product {
+
+	.product_meta{
+		.sku_wrapper{
+			display: flex;
+		}
+
+		span{
+			display: block;
+		}
+
+		a{
+			color: $green;
+		}
+	}
+
+	.woocommerce-product-details__short-description{
+		font-size: 18px;
+		color: $text-color;
+	}
+}
+
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price{
+	color: $green;
+}
+
+.woocommerce div.product p.stock{
+	color: $green;
+	font-size: 18px;
+	font-weight: 400;
+}
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button.alt, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button.alt{
+	background-color: $green;
+
+	&:hover{
+		background-color: $green;
+
+	}
+}
+
+body.woocommerce  div.product .qib-button-wrapper{
+	box-shadow: 0px 0px 0px 1px rgba(93, 93, 93, 1);  
+	border-radius: 10px;
+	overflow: hidden;
+}
+.qib-button-wrapper .quantity input.input-text.qty.text{
+	padding:0 !important;
+	font-size: 16px  !important;
+	color: $text-color !important;
+}
+.qib-button-wrapper button.qib-button, .qib-button-wrapper div.quantity.wqpmb_quantity{
+	height:48px !important;
+}
+body .qib-button-wrapper .minus.qib-button, body .qib-button-wrapper .plus.qib-button{
+
+}
+.qib-button-wrapper{
+	margin:0 !important;
+	margin-right: 5px !important;
+}
+.qib-button-wrapper button.qib-button{
+	padding:6px !important;
+	width:30px !important;
+}
+.thc-con-info-sp{
+	border-bottom: 1px solid $text-color;
+	margin-bottom: 15px;
+	p{
+		color: #000;
+		font-weight: 600;
+	}
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+	display: none;
+}
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs{
+	border:1px solid #000;
+	border-radius: 10px;
+	padding:30px 40px;
+}
+.woocommerce-tabs{
+	margin-bottom:70px;
+	h2{
+		font-size: 27px;
+		font-weight: 700;
+		padding-bottom: 15px;
+	}
+
+}
+.woocommerce div.product .woocommerce-tabs .panel{
+	margin:0;
+}
+
+.before-wc-tabs-sn{
+	height: 60px;
+	clear:both;
+}
+
+.related.products > h2{
+	
+	font-family: $permanent-font;
+	text-align: center;
+	padding-bottom: 30px;
+	
+}

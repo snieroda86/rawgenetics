@@ -7,6 +7,8 @@ if(!class_exists('WC_Product_SN')){
 
 		public function __construct(){
 			add_action('woocommerce_shop_loop_item_title' , array( $this , 'show_category_on_product_loop'), 20, 1);
+			add_action('woocommerce_single_product_summary' , array( $this , 'add_thc_info_after_add_to_cart') , 35);
+			add_filter( 'woocommerce_product_tabs', array($this , 'sn_remove_description_tab') , 11 );
 			
 		}
 
@@ -22,6 +24,22 @@ if(!class_exists('WC_Product_SN')){
                     echo '<h4 class="product-loop-cat-name">' . $category->name . '</h4>';
                 }
             }
+		}
+
+		/*
+		** THC concentration info
+		*/
+		public function add_thc_info_after_add_to_cart(){
+			echo '<div class="thc-con-info-sp"><p>All Seeds are considered HEMP Seeds by law. Every seed tested contained less than 0.03% THC</p> </div>';
+		}
+
+		/*
+		** Remove product tabs
+		*/
+		public function sn_remove_description_tab( $tabs ) {
+			unset( $tabs['reviews'] );
+			unset( $tabs['additional_information'] );
+			return $tabs;
 		}
 
 	}

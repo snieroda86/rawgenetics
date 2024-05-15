@@ -60,6 +60,7 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_single_product_summary' );
 		?>
 	</div>
+	<div class="before-wc-tabs-sn"></div>
 
 	<?php
 	/**
@@ -74,3 +75,6 @@ if ( post_password_required() ) {
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+
+
+

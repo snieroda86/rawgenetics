@@ -82,9 +82,19 @@ get_header();
 	 <!-- Related posts area -->
       <div class="sp-related-area pt-100 pb-100" style="background:rgba(0, 0, 0, 0.1);">
       	<div class="container-lg">
-      		<h2 class="section-title-sn font-permanent pb-3">
-                  <?php _e('Also check' , 'web14devsn'); ?>
-            </h2>
+      		<div class="row g-4">
+      			<div class="col-6 ">
+	      			<h2 class="section-title-sn font-permanent pb-3">
+		                  <?php _e('Also check' , 'web14devsn'); ?>
+		            </h2>		
+      			</div>
+      			<div class="col-6 d-flex justify-content-end">
+					<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="ml-auto btn-main-web14 btn-border-green-sn">
+						<?php _e('All news' , 'web14devsn'); ?>
+					</a>
+				</div>
+      		</div>
+      		
 
             <div class="sp-related-container">
                 <?php 

@@ -179,3 +179,10 @@ li.product a.button.added::before , li.product a.button.loading::before{
 	background: $green;
 	color: #fff;
 }
+
+.woocommerce-breadcrumb{
+	*{
+		font-size: 16px !important;	
+	}
+	
+}
