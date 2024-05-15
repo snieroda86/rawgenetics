@@ -14,7 +14,7 @@
           speed: 200,
           fade: true,
           cssEase: 'linear',
-         
+          // appendDots: $('.s-slider-post-content')
         });
 
     	<?php endif; ?>

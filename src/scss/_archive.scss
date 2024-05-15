@@ -55,13 +55,14 @@ h1.page-title{
 }
 
 .post-cat-filter-sn{
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 	position: relative;
 	z-index: 3; 
 
 	.all-cats-btn{
 		a{
 			margin-right: 15px;
+			margin-bottom: 15px;
 		}
 	}
 }
@@ -80,7 +81,7 @@ h1.page-title{
 	@include breakpoint('tablet'){
 		width:100%;
 		padding-right: 0;
-		margin-bottom: 50px; 
+		margin-bottom: 50px;  
 	}
 }
 
@@ -107,6 +108,59 @@ h1.page-title{
 
 		a{
 			color: #3E1F00;
+		}
+	}
+}
+
+.post-slider-wrapper-sn{
+	padding-bottom: 70px;
+
+	.post-slider-sn{
+		position: relative;
+
+		.slick-track{
+			
+			.slick-slide{
+				img{
+					object-fit: cover;
+					object-position: center ;
+					height: 450px;
+					// width:100%;
+					border-radius: 10px; 
+				}
+			}
+		}
+
+		.s-slider-post-content{
+			padding:60px 0 60px 30px;
+
+			@include breakpoint('tablet'){
+				padding: 0 0 40px 0; 
+			}
+			
+
+			.post-meta-text{
+				color: $green;
+			}
+
+			h2.single-post-title{
+				color: $black;
+				font-size: 28px;
+				padding-bottom: 10px;  
+			}
+			.post-excerpt-sn{
+				padding-bottom: 20px;
+				p{
+					font-size: 18px;
+				}
+			}
+
+		}
+
+		.slick-dots{
+			position: absolute;
+			right:0;
+			bottom:0; 
 		}
 	}
 }

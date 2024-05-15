@@ -1,25 +1,19 @@
 <?php
 	$args = array(
-	    'post_type' => 'post', 
-	    'posts_per_page' => 5, 
-	    'meta_query' => array(
-	        'relation' => 'OR',
+	    'post_type'      => 'post',
+	    'posts_per_page' => 5,
+	    'meta_query'     => array(
 	        array(
-	            'key' => '_is_featured', 
-	            'value' => '1',
-	            'compare' => '='
+	            'key'     => '_is_featured',
+	            'value'   => '1',
+	            'compare' => '=',
 	        ),
-	        array(
-	            'key' => '_is_featured',
-	            'compare' => 'NOT EXISTS'
-	        )
 	    ),
-	    'orderby' => array(
-	        'meta_value' => 'DESC', 
-	        'date' => 'DESC'
-	    )
+	    'orderby'        => array(
+	        'meta_value' => 'DESC',
+	        'date'       => 'DESC',
+	    ),
 	);
-
 	$query = new WP_Query($args); ?>
 
 
@@ -39,6 +33,36 @@
 								<?php endif; ?>
 
 							</a>
+						</div>
+						<div class="col-md-6">
+							<div class="single-post-content s-slider-post-content">
+				                <div class="post-meta-row d-flex align-items-center">
+				            				            
+				                   <div class="post-meta-text">
+				                       <h6><?php echo get_the_date(); ?></h6>
+				                   </div>
+				                </div>
+
+				                <a href="<?php the_permalink(); ?>">
+				                   <h2 class="single-post-title">
+				                       <?php the_title(); ?>
+				                   </h2>
+				                </a>
+
+				                <div class="post-excerpt-sn">
+				                	<p>
+				                    <?php
+									echo wp_trim_words( get_the_content(), 40, '...' );
+									?>
+									</p>
+				                </div>
+
+				                <div class="post-more-link">
+				                	<a href="<?php the_permalink(); ?>" class="btn-main-web14">
+				                		<?php _e('Read more' , 'web14devsn'); ?>
+				                	</a>
+				                </div>
+				            </div>
 						</div>
 					</div>
 				</div>

@@ -15,45 +15,36 @@
 
 			<div class="blog-posts-container p-relative">
                 <?php  
-                function getFeaturedBlogPosts() {
-
-				   $args = array(
-					    'post_type'      => 'post',
-					    'posts_per_page' => 3,
-					    'meta_query'     => array(
-					        'relation' => 'OR',
-					        array(
-					            'key'     => 'featured_posts',
-					            'value'   => true,
-					            'compare' => '=',
-					        ),
-					        array(
-					            'key'     => 'featured_posts',
-					            'compare' => 'NOT EXISTS',
-					        ),
-					    ),
-					    'orderby'        => array(
-					        'meta_value' => 'DESC', 
-					        'date'       => 'DESC', 
-					    ),
-					);
+				function getLatestBlogPosts() {
+				    $args = array(
+				        'post_type'      => 'post',
+				        'posts_per_page' => 3,
+				        'meta_query'     => array(
+				            array(
+				                'key'     => 'featured_posts',
+				                'compare' => 'NOT EXISTS',
+				            ),
+				        ),
+				        'orderby'        => array(
+				            'date' => 'DESC', 
+				        ),
+				    );
 				    $query = new WP_Query($args);
 
 				    if ($query->have_posts()) {
-				        
 				        return $query->posts;
 				    }
 
 				    return array();
 				}
 
-    
-				$featured_posts = getFeaturedBlogPosts();
 
-				if ($featured_posts) : ?>
-					<div class="row post-grid-row-sn g-5">
+				$recent_posts = getLatestBlogPosts();
+
+				if ($recent_posts) : ?>
+					<div class="row g-5">
 					<?php 
-				    foreach ($featured_posts as $post) : ?>
+				    foreach ($recent_posts as $post) : ?>
 				        <?php setup_postdata($post); ?>
 				        <div class="article-col-sn col-lg-4 col-md-6 col-sm-6 col-12 mb-4 mb-lg-0">
 							<?php get_template_part( 'template-parts/content'); ?>	

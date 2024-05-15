@@ -252,7 +252,7 @@ add_action( 'wp_enqueue_scripts', 'web14devsn_scripts' );
 
 
 // Disable gutenberg editor
-add_filter( 'use_block_editor_for_post', '__return_false' );
+// add_filter( 'use_block_editor_for_post', '__return_false' );
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
 /* Woocommerce customization*/
@@ -268,6 +268,57 @@ function register_navwalker(){
 
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
+
+/**
+ * Exclude featured posts from main blog loop
+ */
+function sn_exclude_featured_from_blog_index( $query ) {
+	if ( ! is_admin() && $query->is_home() && $query->is_main_query() ) {
+		$post_ids = bt_featured_post_ids();
+		if ( ! empty( $post_ids ) ) {
+			$query->set( 'post__not_in', $post_ids );
+		}
+	}
+}
+add_action( 'pre_get_posts', 'sn_exclude_featured_from_blog_index' );
+
+
+/*
+* Query featured posts
+* Includes the first 4 featured by default. Adjust $num for less or more.
+* Uses an ACF True/False field with key "featured_post", which stores a true value as 1.
+*/
+function bt_featured_post_ids( $num = 5 ) {
+	$post_ids = array();
+
+	$args = array(
+		'post_type'   => 'post',
+		'post_status' => 'publish',
+		'showposts'   => $num,
+		'orderby'     => 'date',
+		'order'       => 'desc',
+		'meta_query'  => array(
+			array(
+				'key'     => 'featured_post',
+				'value'   => 1,
+				'compare' => '=',
+			),
+		),
+	);
+
+	$c_query = new WP_Query( $args );
+
+	if ( $c_query->have_posts() ) {
+		while ( $c_query->have_posts() ) {
+			$c_query->the_post();
+			$post_ids[] = get_the_ID();
+		}
+		wp_reset_postdata();
+
+	}
+
+	return $post_ids;
+}
 
 // Include ACF plugin
 // Define path and URL to the ACF plugin.

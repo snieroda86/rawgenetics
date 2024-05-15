@@ -21,13 +21,12 @@ get_header();
 			<!-- Categories filter -->
         	<?php  get_template_part('template-parts/global/categories-filter'); ?>
 
+        	<!-- Post slider  -->
+			<?php  get_template_part('template-parts/global/post-slider'); ?>
+
         	<div class="d-flex flex-wrap">
         		<div class="post-grid-row-sn ">
         			<?php if ( have_posts() ) : ?>
-
-        				<!-- Post slider  -->
-						<?php  get_template_part('template-parts/global/post-slider'); ?>
-
         				<div class="row g-5">
         					<?php
 							/* Start the Loop */
