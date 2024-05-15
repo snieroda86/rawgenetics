@@ -1,1 +1,37 @@
- 
+.sp-content-wrapper-sn{
+	padding-top: 50px;
+
+	.post-meta-text{
+		color: $green;
+		padding-bottom: 15px;
+	}
+
+	.sp-date-container{
+		img{
+			border-radius:10px;
+		}
+	}
+
+	.sp-content-sn{
+		p{
+			font-size: 18px;
+			color: #5D5D5D;
+		}
+	}
+} 
+
+.sp-category-sn{
+	a{
+		color: $green;
+		font-weight: 600;
+	}
+}
+
+.blog-backward{
+
+	a.btn-main-web14:hover{
+		svg path{
+			fill:#fff;
+		}
+	}
+}

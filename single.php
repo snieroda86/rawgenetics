@@ -12,6 +12,7 @@ get_header();
 
 <main id="primary" class="site-main">
 	<div class="container-lg">
+        <?php  get_template_part('template-parts/global/page-breadcrumb'); ?>
 		
 		<!-- Post content -->
 		<div class="row ">
@@ -23,11 +24,7 @@ get_header();
 						<header>
 							<div class="sp-date-container">
 								<div class="post-meta-row d-flex align-items-center justify-content-center">
-				                   
-				                   <div class="post-meta-i d-flex align-items-center pr-1">
-				                       <img style="height: 20px;" src="<?php echo PATH_SN ?>/uploads/calendar2.svg" alt="Kalendarz">
-				                   </div>
-				                   <div class="post-meta-text text-center">
+				        	        <div class="post-meta-text text-center">
 				                       <h6><?php echo get_the_date(); ?></h6>
 				                   </div>
 				                </div>
@@ -39,7 +36,7 @@ get_header();
 									$categories_list = get_the_category_list(', '); 
 
 									if ($categories_list) {
-									    echo '<span class="category-label-sn">Kategoria:</span> ' . $categories_list;
+									    echo '<span class="category-label-sn">'.__('Category:' , 'web14devsn').'</span> ' . $categories_list;
 									}
 									?>
 				                </div>
@@ -57,8 +54,13 @@ get_header();
 							<?php the_content(); ?>
 						</div>
 						<div class="blog-backward pt-5">
-							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn-main-sn">
-								<?php _e('Powrót na bloga' , 'web14devsn'); ?>
+							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn-main-web14 btn-border-green-sn d-inline-flex align-items-center">
+								<div class="me-2 d-flex align-items-center btn-chevron">
+									<svg xmlns="http://www.w3.org/2000/svg" height="14"  viewBox="0 0 320 512"><path  fill="#4c903f" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+								</div>
+								<div>
+									<?php _e('Back' , 'web14devsn'); ?>
+								</div>
 							</a>
 						</div>
 					</div>
@@ -70,16 +72,18 @@ get_header();
 
 		</div>
 	</div>
+    <?php  get_template_part('template-parts/global/side-arrows'); ?>
+
 
 </main><!-- #main -->
 
 	<!-- Related posts -->
-<section class="section-bg-grey pb-3">
+<section class="section-related-posts pt-100" style="background-image: url(<?php echo PATH_SN ?>/uploads/related-posts-bg.png);background-size: cover;background-position: center;">
 	 <!-- Related posts area -->
-      <div class="sp-related-area pt-5 pb-5">
+      <div class="sp-related-area pt-100 pb-100" style="background:rgba(0, 0, 0, 0.1);">
       	<div class="container-lg">
-      		<h2 class="section-title-sn">
-                  <?php _e('Zobacz również' , 'web14devsn'); ?>
+      		<h2 class="section-title-sn font-permanent pb-3">
+                  <?php _e('Also check' , 'web14devsn'); ?>
             </h2>
 
             <div class="sp-related-container">
@@ -93,12 +97,14 @@ get_header();
 				        'post_type'      => 'post',
 				        'posts_per_page' => 3,
 				        'post__not_in'   => array($current_post_id), 
+				        'ignore_sticky_posts' => 1 
+			
 				    );
 
 				    $query = new WP_Query($args);
 
 				    if ($query->have_posts()) {
-				        // Zwróć wyniki zapytania
+				        
 				        return $query->posts;
 				    }
 
@@ -109,7 +115,7 @@ get_header();
 				$related_posts = getRelatedBlogPosts();
 
 				if ($related_posts) : ?>
-					<div class="row post-grid-row-sn">
+					<div class="row">
 					<?php 
 				    foreach ($related_posts as $post) : ?>
 				        <?php setup_postdata($post); ?>

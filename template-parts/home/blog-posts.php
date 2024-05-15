@@ -19,15 +19,7 @@
 				    $args = array(
 				        'post_type'      => 'post',
 				        'posts_per_page' => 3,
-				        'meta_query'     => array(
-				            array(
-				                'key'     => 'featured_posts',
-				                'compare' => 'NOT EXISTS',
-				            ),
-				        ),
-				        'orderby'        => array(
-				            'date' => 'DESC', 
-				        ),
+				        'ignore_sticky_posts' => 1 
 				    );
 				    $query = new WP_Query($args);
 
