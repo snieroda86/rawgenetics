@@ -16,7 +16,9 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+    <?php  get_template_part('template-parts/global/side-arrows'); ?>
 	<div class="container-lg page-container-sn">
+       <?php  get_template_part('template-parts/global/page-breadcrumb'); ?>
 		<?php
 		while ( have_posts() ) :
 			the_post();

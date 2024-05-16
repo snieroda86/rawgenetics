@@ -1,0 +1,40 @@
+ body.woocommerce-account{
+ 	#customer_login h2{
+ 		font-size: 21px;
+ 	}
+
+ 	.form-active{
+ 		border: 1px solid $green !important; 
+ 		box-shadow: 0px 0px 34px -7px rgba(145, 145, 152, 1);  
+ 	}
+ }
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register , .lost_reset_password{
+	padding:35px;
+	background: #fff;
+	border:1px solid $text-color;
+	border-radius: 10px;
+
+	input[type="text"] , 
+	input[type="password"] ,
+	input[type="email"]{
+		height: 47px; 
+	} 
+
+	.woocommerce-button , .woocommerce-Button{
+		background: $green !important;
+		color: #fff !important;
+		font-weight: 400 !important;
+		font-size: 16px !important; 
+	}
+
+}
+
+.woocommerce-LostPassword.lost_password{
+	text-align: right;
+
+	a{
+		color: $green;
+		text-decoration: underline;  
+	}
+}

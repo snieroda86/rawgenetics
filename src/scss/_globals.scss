@@ -51,9 +51,7 @@ h1,h2,h3,h4,h5,h6{
 p,input,li,button,span,a,strong,table,th,td{
   font-family: $body-font;
   font-size: 18px;
-  
-  // padding:0;
-  // margin:0;
+  color: $text-color;
 }
 h1,h2 , h3 ,h4{  
   font-weight: 600; 

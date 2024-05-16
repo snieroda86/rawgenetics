@@ -186,3 +186,21 @@ li.product a.button.added::before , li.product a.button.loading::before{
 	}
 	
 }
+
+.woocommerce-message{
+	background: $green;
+	border:0;
+	border-radius: 8px;
+	color: #fff;
+	box-shadow: 0px 15px 39px -14px rgba(66, 68, 90, 1);
+}
+.woocommerce-message::before{
+	color: #fff;
+}
+.woocommerce .woocommerce-error .button, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-message .button, .woocommerce-page .woocommerce-error .button, .woocommerce-page .woocommerce-info .button, .woocommerce-page .woocommerce-message .button{
+	background: $black !important;
+	border-radius: 5px;
+	color: #fff !important;
+	font-weight: 400;
+	font-size: 16px;
+}

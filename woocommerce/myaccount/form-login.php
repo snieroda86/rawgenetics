@@ -31,7 +31,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
-		<form class="woocommerce-form woocommerce-form-login login" method="post">
+		<form class="woocommerce-form woocommerce-form-login login <?php echo isset($_GET['user_action']) && $_GET['user_action'] == 'login' ? ' form-active ' : ''; ?>" method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
@@ -47,9 +47,12 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<?php do_action( 'woocommerce_login_form' ); ?>
 
 			<p class="form-row">
-				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
-				</label>
+				<div class="w-100 pb-2">
+					<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme d-flex align-items-center">
+						<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
+					</label>
+				</div>
+				
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 				<button type="submit" class="woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
 			</p>
@@ -69,7 +72,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
-		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
+		<form method="post" class="woocommerce-form woocommerce-form-register register <?php echo isset($_GET['user_action']) && $_GET['user_action'] == 'register' ? ' form-active ' : ''; ?>" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 

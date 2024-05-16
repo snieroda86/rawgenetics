@@ -81,8 +81,8 @@
 								    <li><a class="dropdown-item" href="<?php echo esc_url($account_url) ?>"><?php _e('Dashboard' , 'web14devsn'); ?></a></li>
 								    
 									<?php else: ?>
-										<li><a class="dropdown-item" href="<?php echo esc_url($account_url) ?>"><?php _e('Log in' , 'web14devsn'); ?></a></li>
-									    <li><a class="dropdown-item" href="<?php echo esc_url($account_url) ?>"><?php _e('Register' , 'web14devsn'); ?></a></li>
+										<li><a class="dropdown-item" href="<?php echo esc_url($account_url) ?>?user_action=login"><?php _e('Log in' , 'web14devsn'); ?></a></li>
+									    <li><a class="dropdown-item" href="<?php echo esc_url($account_url) ?>?user_action=register"><?php _e('Register' , 'web14devsn'); ?></a></li>
 									    
 									<?php endif; ?>
 								  </ul>

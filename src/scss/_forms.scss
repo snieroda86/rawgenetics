@@ -17,3 +17,96 @@ input[type="submit"] , button[type="submit"]{
 input{
   outline: 0 !important;
 }
+
+ input[type="text"] ,input[type="password"] , input[type="email"] , select {
+  
+  border:1px solid $text-color;
+  height: 40px;
+  border-radius: 6px;
+  padding:0 15px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+// Woocommerce custom checkbox
+/* Flex layout for checkbox labels in WooCommerce forms, ensuring alignment and spacing */
+.woocommerce form label.woocommerce-form__label-for-checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    padding-left: calc(var(--wpz-checkbox-size) + var(--wpz-border-width) + 10px) !important; /* Space for custom checkbox */
+    min-height: var(--wpz-checkbox-size); /* Minimum height for touch targets */
+    min-width: var(--wpz-checkbox-size); /* Minimum width for touch targets */
+    cursor: pointer; 
+}
+
+/* Ensures the default checkbox is visually hidden but remains accessible */
+.woocommerce form label.woocommerce-form__label-for-checkbox input[type=checkbox] {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+    display: none;
+    position: absolute;
+    -webkit-appearance: none; /* Removes default styling */ 
+
+}
+
+/* Styles for custom checkbox appearance, using pseudo-elements for custom graphics */
+.woocommerce form label.woocommerce-form__label-for-checkbox span:after,
+.woocommerce form label.woocommerce-form__label-for-checkbox span:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /* Center vertically */
+    display: block;
+    background-color: var(--wpz-bg-color);
+    box-sizing: content-box;
+    border: 1px solid $text-color;
+    height: var(--wpz-checkbox-size);
+    width: var(--wpz-checkbox-size);
+    border-radius: var(--wpz-border-radius);
+}
+
+/* Custom checkmark appearance for checked state, using SVG for graphics */
+.woocommerce form label.woocommerce-form__label-for-checkbox input:checked + span:after {
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: var(--wpz-check-size);
+    -webkit-mask-image: var(--wpz-mark-url);
+    mask-image: var(--wpz-mark-url);
+    background-color: var(--wpz-check-color); 
+    margin-left: 2px;
+}
+
+/* Adjusts border color for checked state to match custom checkmark */
+.woocommerce form label.woocommerce-form__label-for-checkbox input:checked + span:before {
+    background-color: var(--wpz-checked-bg-color);
+    border: var(--wpz-border-width) solid var(--wpz-checked-border-color); /* Checked state border color */
+}
+/* Style 9 */
+.woocommerce-form__label-for-checkbox {
+    --wpz-bg-color: transparent;
+    --wpz-checked-bg-color: #4c903f;
+    
+    /* Sizing */
+    --wpz-checkbox-size: 16px;
+    --wpz-check-size: 11px; 
+    
+    /* Check Mark */
+    --wpz-check-color: #fff;
+    --wpz-mark-url: url("../../uploads/check.svg");
+    
+    /* Border */
+    --wpz-border-width: 2px;
+    --wpz-border-radius: 3px;
+    --wpz-border-color: #4c903f;
+    --wpz-checked-border-color: #4c903f; 
+    
+}
