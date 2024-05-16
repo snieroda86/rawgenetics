@@ -1,0 +1,53 @@
+.woocommerce table.shop_table{
+	
+	border-collapse: collapse !important;
+
+	td,th{
+		border:1px solid $text-color;
+		padding:12px 15px;	
+	}
+
+	thead{
+		td,th{
+			background: #F1F6F1;
+		}
+	}
+
+	td.product-thumbnail{
+		img{
+			width:60px;
+		}
+	}
+	td.product-remove{
+		text-align: center;
+
+		a{
+			margin:auto;
+			color: $red !important;
+			font-size: 26px;
+			font-weight: 400;
+			&:hover{
+				background: #fff !important;
+
+			}
+		}
+	}
+
+	button[name="apply_coupon"]{
+		background: $green !important;
+		color: #fff !important;
+		font-weight: 400;
+	}
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text{
+	height: 47px;
+	min-width: 180px;
+	padding:0 15px;
+	border:1px solid $text-color;
+}
+.woocommerce .cart .button, .woocommerce .cart input.button{
+	background: $green !important;
+	color: #fff !important;
+	font-weight: 400;
+}
