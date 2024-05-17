@@ -166,11 +166,19 @@ h3{
   font-weight: 600;
   white-space: nowrap;
   transition: 0.3s;
+
+  &:hover{
+    background: darken( $green , 10%);
+  }
 }
 
 .btn-white-bg{
   color: $black;
   background: #fff;
+
+  &:hover{
+    background: darken( #fff , 10%);
+  }
 }
 
 .btn-main-web14.btn-border-sn{

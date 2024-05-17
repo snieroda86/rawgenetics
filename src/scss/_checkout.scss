@@ -1,0 +1,15 @@
+.support-email-checkout{
+	padding-bottom: 15px;
+	font-weight: 700;
+
+	a{
+		color: $green;
+		text-decoration: underline; 
+	}
+}
+.woocommerce-checkout{
+	h3{
+		font-size: 27px;
+		font-family: $permanent-font;
+	}
+}

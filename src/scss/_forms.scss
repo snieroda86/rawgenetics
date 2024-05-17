@@ -18,13 +18,39 @@ input{
   outline: 0 !important;
 }
 
- input[type="text"] ,input[type="password"] , input[type="email"] , select {
+ input[type="text"] ,input[type="password"] , input[type="email"] , select , input[type="tel"] {
   
   border:1px solid $text-color;
   height: 40px;
   border-radius: 6px;
   padding:0 15px;
 }
+textarea{
+  border:1px solid $text-color;
+  height: 160px;
+  border-radius: 6px;
+  padding:15px;
+}
+.woocommerce form .form-row textarea{
+  height: 160px;
+
+}
+
+.select2-container .select2-selection--single{
+    height: 40px !important;
+    border:1px solid $text-color;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 40px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 40px !important;
+}
+
+
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 

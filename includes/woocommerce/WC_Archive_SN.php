@@ -9,9 +9,14 @@ if(!class_exists('WC_Archive_SN')){
             remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
             remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
             remove_action('woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+            // remove coupon from checkout page
+            // remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 
             add_filter( 'woocommerce_breadcrumb_defaults', array( $this , 'wps_breadcrumb_delimiter') );
             add_filter( 'woocommerce_pagination_args',  array($this, 'custom_pagination_arrows') );
+
+            // Add text on checkout page in header area
+            add_action('woocommerce_before_checkout_form' , array($this , 'add_support_email_info') , 1);
 
         }
 
@@ -32,6 +37,20 @@ if(!class_exists('WC_Archive_SN')){
 
             return $args;
         }
+
+        /*
+        ** Add support email info
+        */
+        public function add_support_email_info() {
+            $support_email = '<p class="support-email-checkout">' . 
+                             __('Please email us at ', 'web14devsn') . 
+                             '<a href="mailto:support@rawgenetics.io">support@rawgenetics.io</a>' . 
+                             __(' if you need assistance with checkout', 'web14devsn') . 
+                             '</p>';
+            echo $support_email;
+        }
+
+
     }
 
     function initialize_wc_archive_sn() {

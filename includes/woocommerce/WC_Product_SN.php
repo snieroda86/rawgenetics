@@ -9,7 +9,7 @@ if(!class_exists('WC_Product_SN')){
 			add_action('woocommerce_shop_loop_item_title' , array( $this , 'show_category_on_product_loop'), 20, 1);
 			add_action('woocommerce_single_product_summary' , array( $this , 'add_thc_info_after_add_to_cart') , 35);
 			add_filter( 'woocommerce_product_tabs', array($this , 'sn_remove_description_tab') , 11 );
-			
+			add_filter( 'woocommerce_product_add_to_cart_text', array( $this , 'change_variable_add_to_cart_text') , 9999, 2 );
 		}
 
 		/*
@@ -40,6 +40,16 @@ if(!class_exists('WC_Product_SN')){
 			unset( $tabs['reviews'] );
 			unset( $tabs['additional_information'] );
 			return $tabs;
+		}
+
+		/*
+		** Change variable add to cart text
+		*/
+		public function change_variable_add_to_cart_text( $label, $product ){
+			if ( $product->is_type( 'variable' ) ) {
+			return __('Buy now' , 'web14devsn');
+			}
+			return $label;
 		}
 
 	}
