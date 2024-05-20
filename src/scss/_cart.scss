@@ -134,12 +134,19 @@
 
 .woocommerce ul#shipping_method li {
    position: relative;
-   text-indent: unset !important; /* Fix an Astra issue */
+   text-indent: unset !important; 
+
+   label:before , label:after{
+   	display: none !important;
+
+   }
 }
 
 /* Hide the default input[type="radio"] controls */
 .woocommerce ul#shipping_method li input {
-   display: none;
+   display: none; 
+
+   
 }
 
 .woocommerce ul#shipping_method li input+label {
@@ -149,13 +156,15 @@
    cursor: pointer;
    border: 1px solid $black;
    text-align: center;
+   border-radius: 8px;
+   font-size: 16px !important;
 }
 
 .woocommerce ul#shipping_method li input:checked+label {
    padding: 0.5em;
-   background-color: $black;
+   background-color: $green;
    color: white !important;
-   border-color: $black;
+   border-color: $green;
 
    .woocommerce-Price-amount , .woocommerce-Price-amount span{
    	 color: white !important;

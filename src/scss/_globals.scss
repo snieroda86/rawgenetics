@@ -9,7 +9,7 @@ body{
   background-attachment: fixed;
 
   *{
-    transition: 0.3s;      
+    // transition: 0.3s;      
   }
   
 }
@@ -27,8 +27,9 @@ section{
 
 .page-breadcrumbs-sn{
   padding: 15px 0 5px 0;
-  a,p,span{
+  a,p,span,#breadcrumbs{
     color:#5D5D5D !important;
+    font-size: 16px !important;  
   }
 }
 
@@ -153,7 +154,7 @@ h3{
   margin-right: 10px !important;
 }
 
-.btn-main-web14{
+.btn-main-web14 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -169,6 +170,33 @@ h3{
 
   &:hover{
     background: darken( $green , 10%);
+  }
+}
+.woocommerce-mini-cart__buttons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: $black;
+  height: 40px;
+  color:#fff;
+  min-width: 120px;
+  padding:4px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 16px;
+
+  &:hover{
+    background: darken( $green , 10%);
+  }
+
+  &.checkout{
+    background: $green;
+
+    &:hover{
+      background: darken( $green , 10%);
+    }
   }
 }
 

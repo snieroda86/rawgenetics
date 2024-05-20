@@ -221,3 +221,27 @@ li.product a.button.added::before , li.product a.button.loading::before{
 	font-weight: 400;
 	font-size: 16px;
 } 
+
+.woocommerce-error{
+	background: $red;
+	border:0;
+	border-radius: 8px;
+	box-shadow: 0px 15px 39px -14px rgba(66, 68, 90, 1);
+
+	li{
+		color: #fff;
+		font-weight: 400;
+		
+		font-size: 16px;
+
+		strong{
+		 color: #fff;
+		 font-weight: 400;
+		font-size: 16px;
+		 
+		}
+	}
+}
+.woocommerce-error::before{
+	color:#fff;
+}

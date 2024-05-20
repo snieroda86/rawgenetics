@@ -99,7 +99,15 @@
 			        				<img src="<?php echo PATH_SN ?>/uploads/shopping-cart.png" alt="Cart">
 			        			</a>
 			        			<div class="web14-cart-count">
-			        				<span>(<?php echo WC()->cart->get_cart_contents_count() ?>)</span>
+			        				(<span id="cart-count-num"><?php echo WC()->cart->get_cart_contents_count() ?></span>)
+			        			</div>
+
+			        			<!-- Minicart -->
+			        			<div class="cart-minicart-sn">
+			        				<div class="widget_shopping_cart_content">
+			        					<?php woocommerce_mini_cart(); ?>
+			        						
+			        					</div>
 			        			</div>
 			        		</div>
 			        		<?php endif; ?>

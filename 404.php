@@ -17,7 +17,7 @@ get_header();
 				<div class="row">
 					<div class="col-12 ptb-60">
 						<header class="page-header">
-							<h1 class="page-title"><?php esc_html_e( 'Oops! Taka strona nie istnieje.', 'web14devsn' ); ?></h1>
+							<h1 class="page-title text-center pt-5"><?php esc_html_e( 'Oops! Page not found.', 'web14devsn' ); ?></h1>
 						</header><!-- .page-header -->
 
 						<div class="page-content text-center">

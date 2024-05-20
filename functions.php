@@ -256,6 +256,8 @@ add_action( 'wp_enqueue_scripts', 'web14devsn_scripts' );
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
 /* Woocommerce customization*/
+require_once get_template_directory() . '/includes/woocommerce/global.php';
+
 require_once get_template_directory() . '/includes/woocommerce/WC_Product_SN.php';
 require_once get_template_directory() . '/includes/woocommerce/WC_Archive_SN.php';
 
