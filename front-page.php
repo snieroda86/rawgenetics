@@ -51,7 +51,21 @@ get_header();
           speed: 200,
           fade: true,
           cssEase: 'linear',
-          appendDots: $('.main-slider-sn-wrapper')
+          appendDots: $('.main-slider-sn-wrapper') ,
+          responsive: [
+           
+            {
+              breakpoint: 650,
+              settings: {
+                dots: false,
+                arrows:false
+              }
+            }
+            
+          ]
+
+
+
         });
 
          // Onsale products slider

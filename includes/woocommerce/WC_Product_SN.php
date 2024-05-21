@@ -43,10 +43,10 @@ if(!class_exists('WC_Product_SN')){
 		}
 
 		/*
-		** Change variable add to cart text
+		** Change variable/grouped add to cart text
 		*/
 		public function change_variable_add_to_cart_text( $label, $product ){
-			if ( $product->is_type( 'variable' ) ) {
+			if ( $product->is_type( 'variable' ) || $product->is_type( 'grouped' )  ) {
 			return __('Buy now' , 'web14devsn');
 			}
 			return $label;

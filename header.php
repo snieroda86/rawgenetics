@@ -40,9 +40,6 @@
 							}
 				  		?>
 				  	</div>
-	    			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-			            <span class="navbar-toggler-icon"></span>
-			        </button>
 			        
 			        <div class="collapse navbar-collapse" id="main-menu">
 			            <?php
@@ -56,13 +53,17 @@
 			                'walker' => new bootstrap_5_wp_nav_menu_walker()
 			            ));
 			            ?>
+			            <!-- Search box -->
+		        		<div class="web14-search-box d-flex d-md-none text-center">
+		        			<?php echo do_shortcode('[fibosearch]'); ?>
+		        		</div>
 
 			        </div>
 
 			        <?php if ( class_exists( 'woocommerce' ) ): ?>
 			        	<div class="search-box-h-wrapper d-flex ">
 			        		<!-- Search box -->
-			        		<div class="web14-search-box">
+			        		<div class="web14-search-box d-none d-md-flex">
 			        			<?php echo do_shortcode('[fibosearch]'); ?>
 			        		</div>
 			        		<!-- My account icon -->
@@ -70,8 +71,17 @@
 			        		$account_url = get_permalink( get_option('woocommerce_myaccount_page_id') );	?>
 			        		<?php if($account_url): ?>
 			        		<div class="web14-myaccount-link">
+
+			        			<!-- max-width: 767px  -->
+			        			<div class="mobile-account-icon d-md-none">
+			        				<a href="<?php echo esc_url($account_url) ?>">
+			        					<img src="<?php echo PATH_SN ?>/uploads/myaccount.png" alt="My account">
+			        				</a>
+			        			</div>
+			        			<!-- min-width: 768px  -->
+
 			        		
-			        			<div class="dropdown my-account-menu-dropdown">
+			        			<div class="dropdown my-account-menu-dropdown d-none d-md-block">
 								  <a href="#" class=" dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 								    <img src="<?php echo PATH_SN ?>/uploads/myaccount.png" alt="My account">
 			        				<span><?php _e('My account' , 'web14devsn'); ?></span>
@@ -103,7 +113,7 @@
 			        			</div>
 
 			        			<!-- Minicart -->
-			        			<div class="cart-minicart-sn">
+			        			<div class="cart-minicart-sn d-none d-sm-block">
 			        				<div class="widget_shopping_cart_content">
 			        					<?php woocommerce_mini_cart(); ?>
 			        						
@@ -111,6 +121,13 @@
 			        			</div>
 			        		</div>
 			        		<?php endif; ?>
+			        		<!-- Menu toggle button -->
+			        		<div class="menu-toggle-btn-wrap d-flex align-items-center">
+			        			<button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+			           			 <span class="navbar-toggler-icon"></span>
+			        		</button>	
+			        		</div>
+			        		
 			        	</div>
 
 			        <?php else: ?>

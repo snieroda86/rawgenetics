@@ -7,11 +7,10 @@ body{
   background: url(../../uploads/body_bg.svg);
   background-size: cover;
   background-attachment: fixed;
-
-  *{
-    // transition: 0.3s;      
-  }
   
+}
+a.button{
+  transition: 0.3s;
 }
 .border-none{
   border:none !important;
@@ -77,6 +76,17 @@ h1{
 }
 h2{
   font-size: 40px;
+
+  &.section-title-sn{
+
+    @include breakpoint('medium'){
+      font-size: 36px;
+    }
+    @include breakpoint('phoneH'){
+      font-size: 28px;
+    }
+
+  }
 }
 h3{
   font-size: 22px;
@@ -87,6 +97,10 @@ h3{
 }
 .pt-100{
   padding-top:100px; 
+
+  @include breakpoint('phoneH'){
+    padding-top: 60px;
+  }
 }
 
 .pb-80{
@@ -101,6 +115,10 @@ h3{
   top:70vh;
   left:0;
   transform: translateX(-40%);
+
+  @include breakpoint('medium'){
+    display: none; 
+  }
 }
 
 .side-arrow-right{
@@ -108,6 +126,10 @@ h3{
   top:150vh;
   right:0;
   transform: translateX(40%);
+
+  @include breakpoint('medium'){ 
+    display: none;
+  }
 }
 
 .selectDisable , img { 
@@ -172,30 +194,30 @@ h3{
     background: darken( $green , 10%);
   }
 }
-.woocommerce-mini-cart__buttons a{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background: $black;
+.woocommerce-mini-cart__buttons a.button{
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  background: $black !important;
   height: 40px;
   color:#fff;
   min-width: 120px;
   padding:4px 25px;
-  border-radius: 8px;
+  border-radius: 8px !important;
   font-weight: 600;
   white-space: nowrap;
-  transition: 0.3s;
-  font-size: 16px;
+  transition: 0.3s; 
+  font-size: 16px !important;
 
   &:hover{
-    background: darken( $green , 10%);
+    background: darken( $green , 10%) !important;
   }
 
   &.checkout{
-    background: $green;
+    background: $green !important;
 
     &:hover{
-      background: darken( $green , 10%);
+      background: darken( $green , 10%) !important;
     }
   }
 }

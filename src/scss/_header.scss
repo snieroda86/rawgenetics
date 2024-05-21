@@ -12,7 +12,7 @@ header#masthead{
 
     nav.navbar{
 
-        @media(min-width: 991px){
+        @media(min-width: 992px){
 
             .navbar-collapse{
                 padding-left: 25px !important;   
@@ -29,14 +29,50 @@ header#masthead{
 
             .nav-link{ 
                 padding:8px 22px;  
-                font-weight: 600;
+                font-weight: 400;
                 color: $black;
+                
             }
 
         }
+
+        @include breakpoint('medium'){  
+            .navbar-collapse{
+                position: absolute;
+                top:-15px;
+                right:0;
+                left:0;
+                z-index: 9;
+                background: #fff;
+                box-shadow: 0px 12px 26px -10px rgba(66, 68, 90, 0.5);
+
+                & > ul.navbar-nav{
+                    padding: 130px 15px 30px 15px;
+                    margin:auto; 
+
+                    li{
+                        text-align: center; 
+                    }
+
+                }
+
+                .web14-search-box{
+                    padding:0 15px 40px 15px; 
+                }
+            }
+        }
+
+        
+    }
+
+    #web14-logo{
+        position: relative;
+        z-index: 10;
     }
 	
   .search-box-h-wrapper{
+     position: relative;
+     z-index: 10;
 
   	.web14-search-box{
   		display: flex;
@@ -61,11 +97,38 @@ header#masthead{
   		}
   	}
 
+     button.navbar-toggler{
+
+        @include breakpoint('medium'){
+            position: relative;
+            z-index: 10;
+            width: 44px;
+            height: 44px;
+            border:2px solid #ddd;
+            padding:0;
+            background: #fff;
+            border-radius: 50%;
+            @include el-center;
+            box-shadow: 0px 0px 7px 0px rgba(66, 68, 90, 0.17);
+
+            span.navbar-toggler-icon{
+                width:1em;
+                height:1em;
+
+            }
+        }
+
+    }
+
   	.web14-shopping-cart{
   		display: flex;
   		align-items: center;
   		padding-left: 25px; 
         position: relative;
+
+        @include breakpoint('phoneH'){
+            padding-left: 15px;
+        }
 
   		img{
   			height: 20px;
@@ -77,6 +140,7 @@ header#masthead{
   				font-size: 14px; 
   			}
   		}
+
 
         .cart-minicart-sn{
             position: absolute;
@@ -109,10 +173,13 @@ header#masthead{
 
                         a{
                             @include el-center;
-                            background: #ddd;
+                            background: #ddd !important;
                             width: 22px;
                             height:22px;
                             border-radius: 50%;
+                            color: #fff !important;
+                            font-size: 16px; 
+                            font-weight: 400;
                         }
                     }
 
@@ -122,6 +189,7 @@ header#masthead{
                             width:80px !important;
                             height:80px !important;
                             object-fit: cover;
+                            float:none !important;
 
                         }
                     }
