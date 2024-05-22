@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Kontakt
+ * Template Name: Contact page
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package web14devsn
@@ -12,83 +12,57 @@ get_header();
 	<main id="primary" class="site-main page-about">
 		
 		<?php while ( have_posts() ) : the_post(); ?>
-		<div class="container-lg pt-5 pb-5">
-				<div class="row">
-					<div class="col-lg-4 col-md-6">
-						<div class="contact-info-sn pt-3 mb-3">
-							<div class="contact-info-sn-box">
-								<h1 class="contact-info-h1">Dane kontaktowe</h1>
-								<div>
-									<?php the_content(); ?>
-								</div>
-
-								<div class="pt-3">
-									<ul class="contact-sn-list">
-
-										<?php if(get_field('telefon_kontaktowy' , 'option')): ?>
-						        		<li>
-						        			<div class="d-flex pb-1">
-						        				<div class="d-flex align-items-center pr-1">
-						        					<img src="<?php echo PATH_SN ?>/uploads/phone.png">
-						        				</div>
-						        				<div class="d-flex align-items-center">
-						        					<a href="tel:<?php the_field('telefon_kontaktowy' , 'option') ?>"  class="p-0 m-0">
-						        						<p class=" m-0 font-weight-bold"><?php the_field('telefon_kontaktowy' , 'option') ?></p>
-						        					</a>
-						        				</div>
-
-						        			</div>
-						        		</li>
-						        		<?php endif; ?>
-
-						        		<?php if(get_field('adres_email' , 'option')): ?>
-						        		<li>
-						        			<div class="d-flex pb-1">
-						        				<div class="d-flex align-items-center pr-1">
-						        					<img src="<?php echo PATH_SN ?>/uploads/envelope.png">
-						        				</div>
-						        				<div class="d-flex align-items-center">
-						        					<a href="mailto:<?php the_field('adres_email' , 'option') ?>"  class="p-0 m-0">
-						        						<p class="footer-text m-0">
-						        							<?php the_field('adres_email' , 'option') ?>
-						        								
-						        						</p>
-						        					</a>
-						        				</div>
-
-						        			</div>
-						        		</li>
-						        		<?php endif; ?>
-						        	</ul>
-								</div>
-							</div>
-						</div>
+		<div class="container-lg">
+			<?php  get_template_part('template-parts/global/page-breadcrumb'); ?>
+			<header class="page-header cat-header-sn">
+				<h1 class="page-title"><?php the_title(); ?></h1>
+			</header><!-- .page-header -->
+			<div class="page-content-sn pb-5">
+				<?php the_content(); ?>
+			</div>
+			<div class="contact-data-row">
+				<div class="row g-5">
+					<div class="col-md-4">
+						<h5>Address:</h5>
+						<p>13089 Payton Drive Unit C-192, Chino Hills, CA 91709</p>
 					</div>
-					<div class="col-lg-8 col-md-6 pl-md-5">
-						<div class="cf-wrapper-sn  pt-3">
-							<h2 class="section-title-sn pb-2 pt-0 mt-0">
-								Formularz kontaktowy
-							</h2>
-							<div class="cf-form-wrapper">
-								<?php echo do_shortcode('[wpforms id="142"]'); ?>
-							</div>
-						</div>
+					<div class="col-md-4">
+						<h5>Phone:</h5>
+						<p>(951) 496-6564 (Please Send Text First)</p>
+					</div>
+					<div class="col-md-4">
+						<h5>Email:</h5>
+						<p><a href="mailto:support@rawgenetics.io">support@rawgenetics.io</a></p>
 					</div>
 				</div>
-
-			
-			
-		</div>
-
-		<!-- Google map -->
-
-		<section>
-			<div  class="pb-5">
-				<?php the_field('mapa_z_lokalizacja'); ?>
 			</div>
-		</section>
+			<!-- Contact form -->
+			<div class="cf-sn-wrapper">
+				<?php echo do_shortcode('[wpforms id="218"]'); ?>
+			</div>
 
-
+			<!-- Discord channel -->
+			<div class="discord-channel-wrap">
+				<div class="discrod-channel-box">
+					<div class="dcb-inner d-flex flex-wrap">
+						<div class="dcb-icon">
+							<img src="<?php echo PATH_SN ?>/uploads/discord.svg" alt="Discord">
+						</div>
+						<div class="dcb-heading">
+							<h2>
+								Please Use Our Discord<br>
+								<span class="text-green"> Customer Service Channel</span>
+							</h2>
+						</div>
+						<div class="dcb-button">
+							<a href="#" class="ml-auto btn-main-web14 btn-border-green-sn">
+								Customer Service
+							</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
 		<?php endwhile; ?>
 	</main><!-- #main -->
 <?php

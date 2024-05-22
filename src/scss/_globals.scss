@@ -176,7 +176,7 @@ h3{
   margin-right: 10px !important;
 }
 
-.btn-main-web14 {
+.btn-main-web14  {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -194,6 +194,18 @@ h3{
     background: darken( $green , 10%);
   }
 }
+.wpforms-submit{
+  background: $green !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 48px !important;
+
+   &:hover{
+    background: darken( $green , 10%) !important;
+  }
+}
+
 .woocommerce-mini-cart__buttons a.button{
   display: flex;
   justify-content: center !important;
