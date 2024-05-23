@@ -15,9 +15,8 @@
 						</div>
 					</div>
 					<div class="box-text-desc">
-						<?php if(get_field('info_box_sc')): ?>
-						<p class="text-white"><?php the_field('info_box_sc') ?></p>
-						<?php endif; ?>
+						<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua</p>
 					</div>
 
 				</div>

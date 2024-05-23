@@ -4,17 +4,19 @@
 			<div class="col-md-6 pe-md-5">
 				<div class="sec-about-desc">
 					<h2 class="section-title-sn">
-						LOREM IPSUM DOLOR SIT AMET CONSECTETUR
+						<?php the_field('heading_ac'); ?>
 					</h2>
 					<h3 class="section-subtitle-sn text-uppercase">
-						adipiscing
+						<?php the_field('subheading_ac'); ?>
 					</h3>
 					<p class="font-18">
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu totam rem aperiam, eaque ipsa quae ab illo inventore veritati et quasi architecto
+						<?php the_field('description_ac'); ?>
 					</p>
-					<a href="#" class="btn-main-web14">
-						All products
+					<?php if( get_field('button_label_ac') && get_field('button_link_ac')): ?>
+					<a href="<?php echo esc_url(get_field('button_link_ac')); ?>" class="btn-main-web14">
+						<?php the_field('button_label_ac'); ?>
 					</a>
+					<?php endif; ?>
 				</div>
 			</div>
 			<div class="col-md-6 sec-about-icons p-relative">
@@ -22,47 +24,39 @@
 					<img class="moving-cloud img-fluid" id="moving-cloud" data-depth="0.1" src="<?php echo PATH_SN ?>/uploads/cloud-about.png" alt="Cloud">	
 				</div>
 
-				<div class="about-icons-container ps-md-5">
-					<!-- Item -->
-					<div class="icon-row-item d-flex">
-						<!-- Icon -->
-						<div class="icon-item-icon">
-							<div class="icon-item-circle">
-								<img src="<?php echo PATH_SN ?>/uploads/cannabis-icon.svg" alt="Cannabis">
+				<?php
+
+				if( have_rows('icons_ac') ): ?>
+					<div class="about-icons-container ps-md-5">
+					<?php
+				    while( have_rows('icons_ac') ) : the_row();
+
+				        $icon_ac= get_sub_field('icon_ac');
+				        $icon_label_ac= get_sub_field('icon_label_ac');
+
+				        ?>
+
+				        <!-- Item -->
+						<div class="icon-row-item d-flex">
+							<!-- Icon -->
+							<div class="icon-item-icon">
+								<div class="icon-item-circle">
+									<?php 
+									
+									$size = 'full'; // (thumbnail, medium, large, full or custom size)
+									if( $icon_ac ) {
+									    echo wp_get_attachment_image( $icon_ac, $size );
+									} ?>
+								</div>
+							</div>
+							<!-- Label -->
+							<div class="icon-item-label">
+								<h3><?php echo $icon_label_ac ?></h3>
 							</div>
 						</div>
-						<!-- Label -->
-						<div class="icon-item-label">
-							<h3>Lorem ipsum dolor sit amet dolor sit amet consectetur adipiscing consectetur adipiscing</h3>
-						</div>
-					</div>
-					<!-- Item -->
-					<div class="icon-row-item d-flex">
-						<!-- Icon -->
-						<div class="icon-item-icon">
-							<div class="icon-item-circle">
-								<img src="<?php echo PATH_SN ?>/uploads/breeder-icon.svg" alt="Cannabis">
-							</div>
-						</div>
-						<!-- Label -->
-						<div class="icon-item-label">
-							<h3>Lorem ipsum dolor sit amet consectetur adipiscing</h3>
-						</div>
-					</div>
-					<!-- Item -->
-					<div class="icon-row-item d-flex">
-						<!-- Icon -->
-						<div class="icon-item-icon">
-							<div class="icon-item-circle">
-								<img src="<?php echo PATH_SN ?>/uploads/cannabis-magnifier.svg" alt="Cannabis">
-							</div>
-						</div>
-						<!-- Label -->
-						<div class="icon-item-label">
-							<h3>Lorem ipsum dolor sit dolor sit amet consectetur  amet consectetur adipiscing</h3>
-						</div>
-					</div>
-				</div>
+				    <?php endwhile; ?>
+				    </div>
+				<?php endif; ?>
 				
 			</div>
 		</div>

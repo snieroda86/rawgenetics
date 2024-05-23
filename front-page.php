@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying frontpage
- * Template Name: Strona główna
+ * Template Name: Front page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
