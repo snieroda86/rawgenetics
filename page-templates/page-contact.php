@@ -21,20 +21,25 @@ get_header();
 				<?php the_content(); ?>
 			</div>
 			<div class="contact-data-row">
-				<div class="row g-5">
-					<div class="col-md-4">
-						<h5>Address:</h5>
-						<p>13089 Payton Drive Unit C-192, Chino Hills, CA 91709</p>
+				<?php
+				$contact_information = get_field('contact_information');
+				if( $contact_information ): ?>
+				    <div class="row g-5">
+						<div class="col-md-4">
+							<h5><?php _e('Address:' , 'web14devsn'); ?></h5>
+							<p><?php echo $contact_information['address_c_page'] ?></p>
+						</div>
+						<div class="col-md-4">
+							<h5><?php _e('Phone:' , 'web14devsn'); ?></h5>
+							<p><?php echo $contact_information['phone_c_page'] ?></p>
+						</div>
+						<div class="col-md-4">
+							<h5><?php _e('Email:' , 'web14devsn'); ?></h5>
+							<p><a href="mailto:<?php echo $contact_information['email_c_page'] ?>"><?php echo $contact_information['email_c_page'] ?></a></p>
+						</div>
 					</div>
-					<div class="col-md-4">
-						<h5>Phone:</h5>
-						<p>(951) 496-6564 (Please Send Text First)</p>
-					</div>
-					<div class="col-md-4">
-						<h5>Email:</h5>
-						<p><a href="mailto:support@rawgenetics.io">support@rawgenetics.io</a></p>
-					</div>
-				</div>
+				<?php endif; ?>
+				
 			</div>
 			<!-- Contact form -->
 			<div class="cf-sn-wrapper">
@@ -42,26 +47,33 @@ get_header();
 			</div>
 
 			<!-- Discord channel -->
-			<div class="discord-channel-wrap">
-				<div class="discrod-channel-box">
-					<div class="dcb-inner d-flex flex-wrap">
-						<div class="dcb-icon">
-							<img src="<?php echo PATH_SN ?>/uploads/discord.svg" alt="Discord">
+			<?php
+			$discord_c_page = get_field('discord_c_page');
+			if( $discord_c_page ): ?>
+				<div class="discord-channel-wrap">
+					<div class="discrod-channel-box">
+						<div class="dcb-inner d-flex flex-wrap">
+							<div class="dcb-icon">
+								<img src="<?php echo PATH_SN ?>/uploads/discord.svg" alt="Discord">
+							</div>
+							<div class="dcb-heading">
+								<h2>
+									<?php echo $discord_c_page['heading_1_discord']; ?><br>
+									<span class="text-green"> <?php echo $discord_c_page['heading_2_discord']; ?></span>
+								</h2>
+							</div>
+							<?php if($discord_c_page['button_label_discord'] && $discord_c_page['button_link_discord'] ): ?>
+							<div class="dcb-button">
+								<a href="<?php echo esc_url($discord_c_page['button_link_discord']); ?>" class="ml-auto btn-main-web14 btn-border-green-sn">
+									<?php echo $discord_c_page['button_label_discord'];  ?>
+								</a>
+							</div>
+							<?php endif; ?>
 						</div>
-						<div class="dcb-heading">
-							<h2>
-								Please Use Our Discord<br>
-								<span class="text-green"> Customer Service Channel</span>
-							</h2>
-						</div>
-						<div class="dcb-button">
-							<a href="#" class="ml-auto btn-main-web14 btn-border-green-sn">
-								Customer Service
-							</a>
-						</div>
-					</div>
-				</div>	
-			</div>
+					</div>	
+				</div>    
+			<?php endif; ?>
+			
 		</div>
 		<?php endwhile; ?>
 	</main><!-- #main -->

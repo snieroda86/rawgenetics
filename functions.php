@@ -388,6 +388,12 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
     acf_add_options_sub_page(array(
+        'page_title'    => 'Shop settings',
+        'menu_title'    => 'Shop settings',
+        'parent_slug'   => 'theme-general-settings-sn',
+    ));
+
+    acf_add_options_sub_page(array(
         'page_title'    => 'Social media',
         'menu_title'    => 'Social media',
         'parent_slug'   => 'theme-general-settings-sn',

@@ -21,7 +21,7 @@ section{
   z-index: 1;
 }
 .font-permanent{
-  font-family: $permanent-font; 
+  font-family: $permanent-font;  
 }
 
 .page-breadcrumbs-sn{
@@ -36,6 +36,7 @@ main#primary{
   min-height: 100vh; 
   padding-top: 140px;  
   position: relative;
+  overflow: hidden;
 }
 .container-lg{
   max-width: 1440px !important;
@@ -52,6 +53,10 @@ p,input,li,button,span,a,strong,table,th,td{
   font-family: $body-font;
   font-size: 18px;
   color: $text-color;
+
+  @include breakpoint('tablet'){
+    font-size: 16px;
+  }
 }
 h1,h2 , h3 ,h4{  
   font-weight: 600; 
@@ -60,9 +65,15 @@ p{
   margin-bottom: 10px;
   color: $text-color;
   font-size: 18px;
+  @include breakpoint('tablet'){
+    font-size: 16px;
+  }
 }
 .font-18{
   font-size: 18px;
+  @include breakpoint('tablet'){
+    font-size: 16px;
+  }
 }
 .text-red{
   color: $red;
@@ -73,6 +84,14 @@ p{
 
 h1{
   font-size: 32px;
+   @include breakpoint('tablet'){
+      font-size: 28px;
+     
+  }
+
+  @include breakpoint('phoneH'){
+     font-size: 24px; 
+  }
 }
 h2{
   font-size: 40px;
@@ -80,16 +99,17 @@ h2{
   &.section-title-sn{
 
     @include breakpoint('medium'){
-      font-size: 36px;
+      font-size: 36px !important;
     }
     @include breakpoint('phoneH'){
-      font-size: 28px;
+      font-size: 28px !important;
     }
 
   }
 }
 h3{
   font-size: 22px;
+
 }
 
 .pt-80{

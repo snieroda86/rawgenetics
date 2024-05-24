@@ -53,31 +53,40 @@ get_header(); ?>
                 <?php endif; ?>
                 <!-- Shop banner -->
                 <?php if( is_shop()): ?>
-                    <div class="shop-info-banner" style="background-image: url(<?php echo PATH_SN ?>/uploads/shop-banner-bg.jpg);background-size: cover;background-position: center;">
-                        <div class="shop-info-banner-inner">
-                            <div class="d-flex">
-                                <div class="shop-info-banner-num">
-                                    <div class="sib-circle">
-                                        <div class="sib-num">
-                                            <span class="sib-percentage">-50%</span>
+                    <?php
+                    $info_promotions = get_field('info_promotions' , 'option');
+                    if( $info_promotions ): ?>
+                        <div class="shop-info-banner" style="background-image: url(<?php echo esc_url($info_promotions['background_image_prc']) ?>);background-size: cover;background-position: center;">
+                            <div class="shop-info-banner-inner">
+                                <div class="d-flex">
+                                    <div class="shop-info-banner-num">
+                                        <div class="sib-circle">
+                                            <div class="sib-num">
+                                                <div class="sib-percentage d-flex">
+                                                    <span>-</span>
+                                                    <span><?php echo $info_promotions['percentage_discount_value'] ?></span>
+                                                    <span>%</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="shop-info-banner-text d-flex align-items-center">
-                                    <div>
-                                        <h2 class="text-white font-permanent">All Seeds are considered HEMP Seeds by law. Every seed tested contained less than 0.03% THC</h2>
-                                        <?php if( is_product_category()): ?>
-                                            <?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
-                                            <a class="btn-main-web14 btn-border-sn" href="<?php echo $shop_page_url ?>">
-                                                <?php _e('All products' , 'web14devsn'); ?>
-                                            </a>
-                                        <?php endif; ?>
+                                    <div class="shop-info-banner-text d-flex align-items-center">
+                                        <div>
+                                            <h2 class="text-white font-permanent"><?php echo $info_promotions['discount_information'] ?></h2>
+                                            <?php if( is_product_category()): ?>
+                                                <?php $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) ); ?>
+                                                <a class="btn-main-web14 btn-border-sn" href="<?php echo $shop_page_url ?>">
+                                                    <?php _e('All products' , 'web14devsn'); ?>
+                                                </a>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
+                    
                 <?php endif; ?>
 
                 <?php woocommerce_content(); ?>

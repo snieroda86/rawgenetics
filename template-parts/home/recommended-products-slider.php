@@ -1,6 +1,6 @@
 <section  class="section-featured-products woocommerce pt-100">
 	
-	<div class="container-lg">
+	<div class="container-lg onslae-carousel-tmp">
 		
 		<div class="onsale-products-sn-wrapper d-flex flex-wrap">
 

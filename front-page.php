@@ -63,10 +63,9 @@ get_header();
             }
             
           ]
-
-
-
         });
+
+        $('.main-slider-sn').fadeIn();
 
          // Onsale products slider
 
@@ -125,6 +124,8 @@ get_header();
             
           ]
         });
+
+        $('.onslae-carousel-tmp').fadeIn();
 
     });
 </script>

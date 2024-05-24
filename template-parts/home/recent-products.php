@@ -1,14 +1,27 @@
-<section  class="section-recent-products" style="background-image: url(<?php echo PATH_SN ?>/uploads/recent-products-bg.png);background-size: cover; background-position: center top;">
+<?php 
+$section_bg_prod_s = PATH_SN.'/uploads/recent-products-bg.png';
+if(get_field('section_bg_prod_s')){
+	$section_bg_prod_s = get_field('section_bg_prod_s');
+}
+?>
+<section  class="section-recent-products" style="background-image: url(<?php echo $section_bg_prod_s ?>);background-size: cover; background-position: center top;">
 	<div class="container-lg">
 		<header class="section-header">
 			<h2 class="section-title-sn text-center pb-5 text-white">
-				Recent products
+				<?php the_field('heading_prod_s'); ?>
 			</h2>	
 		</header>
 		
 		<div class="row">
 			<div class="col-12">
-				<?php echo do_shortcode('[products limit="8" columns="4" orderby="date" order="DESC" visibility="visible"]'); ?>
+				<?php
+				$num_prod_s = 8;
+				if(get_field('num_prod_s')){
+					$num_prod_s = get_field('num_prod_s');	
+				} 
+				 
+				?>
+				<?php echo do_shortcode('[products limit="'.$num_prod_s.'" columns="4" orderby="date" order="DESC" visibility="visible"]'); ?>
 
 			</div>
 		</div>

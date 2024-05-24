@@ -1,3 +1,4 @@
+
 .sp-content-wrapper-sn{
 	padding-top: 50px;
 
@@ -39,5 +40,17 @@
 	.post-thumbnail-single{
 		border-radius: 10px;
 		overflow: hidden; 
+	}
+}
+
+@include breakpoint('tablet'){
+	h1.single-post-title{
+		font-size: 28px;
+	}
+}
+
+@include breakpoint('phoneH'){
+	h1.single-post-title{
+		font-size: 24px; 
 	}
 }

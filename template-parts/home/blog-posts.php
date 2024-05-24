@@ -11,7 +11,7 @@
 				<?php else: ?>
 					<div class="col-6">
 						<h2 class="section-title-sn font-permanent">
-							Recent posts
+							<?php the_field('heading_bps'); ?>
 						</h2>
 					</div>
 					<div class="col-6 d-flex justify-content-end">
@@ -25,10 +25,15 @@
 
 			<div class="blog-posts-container p-relative">
                 <?php  
-				function getLatestBlogPosts() {
+                $num_of_posts = 3;
+                if(get_field('num_of_posts')){
+                	$num_of_posts = get_field('num_of_posts');
+                }
+                
+				function getLatestBlogPosts( $num_of_posts) {
 				    $args = array(
 				        'post_type'      => 'post',
-				        'posts_per_page' => 3,
+				        'posts_per_page' => $num_of_posts  ,
 				        'ignore_sticky_posts' => 1 
 				    );
 				    $query = new WP_Query($args);
@@ -41,7 +46,7 @@
 				}
 
 
-				$recent_posts = getLatestBlogPosts();
+				$recent_posts = getLatestBlogPosts($num_of_posts);
 
 				if ($recent_posts) : ?>
 					<div class="row g-5">
