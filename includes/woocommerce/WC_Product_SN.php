@@ -10,12 +10,13 @@ if(!class_exists('WC_Product_SN')){
 			add_action('woocommerce_single_product_summary' , array( $this , 'add_thc_info_after_add_to_cart') , 35);
 			add_filter( 'woocommerce_product_tabs', array($this , 'sn_remove_description_tab') , 11 );
 			add_filter( 'woocommerce_product_add_to_cart_text', array( $this , 'change_variable_add_to_cart_text') , 9999, 2 );
+
 		}
 
 		/*
         ** Display product category name with a link
         */
-       public function show_category_on_product_loop($title){
+        public function show_category_on_product_loop($title){
 			global $product;
             $product_categories = get_the_terms($product->get_id(), 'product_cat');
 

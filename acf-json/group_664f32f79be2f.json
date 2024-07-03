@@ -28,31 +28,6 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_664f3b30b0781",
-            "label": "Cannabis leaf",
-            "name": "cannabis_leaf",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
             "key": "field_664f39f1b9abb",
             "label": "Main slider",
             "name": "main_slider_sn",
@@ -214,6 +189,32 @@
                     "default_value": "",
                     "placeholder": "",
                     "parent_repeater": "field_664f39f1b9abb"
+                },
+                {
+                    "key": "field_668571f121ed0",
+                    "label": "Product image",
+                    "name": "product_image_ms",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_664f39f1b9abb"
                 }
             ]
         }
@@ -236,5 +237,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716469441
+    "modified": 1720021995
 }

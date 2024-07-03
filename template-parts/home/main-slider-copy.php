@@ -14,13 +14,9 @@
 							} ?>
 							
 							<img class="img-fluid ms-main-bg-mobile d-block d-md-none" src="<?php echo PATH_SN ?>/uploads/slider-mobile.webp" alt="Main slide">	
-							<!-- Dots -->	
-							<div id="scene-sn-1">						
-								<img data-depth="1"  class="img-fluid selectDisable dots-move-img" src="<?php echo PATH_SN ?>/uploads/slider-dots.png" alt="Dots">
-							</div>
 						</div>
 						<div class="main-slider-row d-flex flex-wrap">
-							<div class="col-12">
+							<div class="col-sm-9 col-lg-7 col-12">
 								<div class="main-slider-container">
 
 								<?php
@@ -38,42 +34,30 @@
 								        $button_1_link_ms = get_sub_field('button_1_link_ms');
 								        $button_2_link_ms = get_sub_field('button_2_link_ms');
 								        $product_image_ms = get_sub_field('product_image_ms');
-
+								        
 								        ?>
 								        <!-- Slide -->
-										<div class="d-flex flex-wrap">
-											<div class="col-md-8 col-12">
-												<div class="m-slider-text-area">
-													<h1><?php echo esc_html($heading_ms_top); ?><br><span class="text-stroke"><?php echo esc_html($heading_ms_bottom); ?></span></h1>
-													<div class="py-3">
-														<p><?php echo esc_html($description_ms); ?></p>
-													</div>	
-												</div>
-												
-												<div class="buttons-row d-flex pt-3 pt-sm-0">
-													<?php if( $button_1_label_ms && $button_1_link_ms): ?>
-													<div class="col-sn me-4">
-														<a href="<?php echo esc_url($button_1_link_ms); ?>" class="btn-main-web14"><?php echo $button_1_label_ms ?></a>
-													
-													</div>
-													<?php endif; ?>
-													<?php if( $button_2_label_ms && $button_2_link_ms): ?>
-													<div class="col-sn">
-														<a href="<?php echo esc_url($button_2_link_ms); ?>" class="btn-main-web14 btn-white-bg"><?php echo $button_2_label_ms ?></a>
-													</div>
-													<?php endif; ?>
-												</div>
-											</div>
-
-											<div class="col-md-4 col-12">
-												<div class="main-slider-right-col" >
-													<?php if( $product_image_ms ): ?>
-													    <img  class="img-fluid selectDisable cannabis-move-img" src="<?php echo esc_url( $product_image_ms['url'] ) ?>" alt="<?php echo $product_image_ms['alt'] ?>">
-													<?php endif; ?>
-														
-												</div>
+										<div>
+											<div class="m-slider-text-area">
+												<h1><?php echo esc_html($heading_ms_top); ?><br><span class="text-stroke"><?php echo esc_html($heading_ms_bottom); ?></span></h1>
+												<div class="py-3">
+													<p><?php echo esc_html($description_ms); ?></p>
+												</div>	
 											</div>
 											
+											<div class="buttons-row d-flex pt-3 pt-sm-0">
+												<?php if( $button_1_label_ms && $button_1_link_ms): ?>
+												<div class="col-sn me-4">
+													<a href="<?php echo esc_url($button_1_link_ms); ?>" class="btn-main-web14"><?php echo $button_1_label_ms ?></a>
+												
+												</div>
+												<?php endif; ?>
+												<?php if( $button_2_label_ms && $button_2_link_ms): ?>
+												<div class="col-sn">
+													<a href="<?php echo esc_url($button_2_link_ms); ?>" class="btn-main-web14 btn-white-bg"><?php echo $button_2_label_ms ?></a>
+												</div>
+												<?php endif; ?>
+											</div>
 										</div>
 
 								    <?php endwhile; ?>
@@ -82,7 +66,16 @@
 								</div>
 								
 							</div>
-							
+							<div class="col-sm-3 col-lg-5 col-12">
+								<div class="main-slider-right-col" id="scene-sn-1">
+									<?php if( get_field('cannabis_leaf') ): ?>
+									    <img data-depth="0.3" class="img-fluid selectDisable cannabis-move-img" src="<?php echo esc_url( get_field('cannabis_leaf')) ?>" alt="Cannabis">
+									<?php endif; ?>
+										
+									<!-- Dots -->
+									<img data-depth="-0.1" class="img-fluid selectDisable dots-move-img" src="<?php echo PATH_SN ?>/uploads/slider-dots.png" alt="Dots">
+								</div>
+							</div>
 
 						</div>
 						

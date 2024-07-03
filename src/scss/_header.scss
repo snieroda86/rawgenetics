@@ -4,11 +4,45 @@ header#masthead{
     top:0;
     left:0;
     right:0;
-    padding-top: 15px; 
+    // padding-top: 15px; 
     z-index: 99;
     transition: 0.3s;
     // transition: background-color 0.3s ease;
     // background: #fff;
+
+    .ticker-top-wrapper{
+        background: $green;
+
+        /*newsticker*/ 
+        .newsticker {
+            margin:auto;
+            max-width:800px;
+            height:100%;
+            padding:5px 15px;
+
+            ul.js-frame{
+                margin:0;
+                padding:0;
+                list-style: none;
+
+                li{
+                    text-align: center;
+
+                    a{
+                        color:#fff;
+                    }
+                }
+            }
+        }
+
+        .newsticker ul li {
+            width: 100%;
+            overflow: hidden;
+            // white-space: nowrap;
+            display: none;
+        }
+
+    }
 
     nav.navbar{
 

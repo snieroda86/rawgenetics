@@ -45,8 +45,9 @@ get_header();
         $('.main-slider-sn').slick({
           dots: true,
           arrows: false,
-          autoplay: true,
+          autoplay: false,
           pauseOnHover : false ,
+          adaptiveHeight: true,
           infinite: true,
           speed: 200,
           fade: true,

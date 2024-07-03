@@ -2,7 +2,25 @@
 	position: relative;
 
 	.main-slider-bg{
+		position:relative;
 
+		@include breakpoint('phoneH'){
+			position: absolute;
+			top:0;
+			left:0;
+			right:0;
+		}
+
+		div#scene-sn-1{
+			position: absolute;
+			top:80px;
+			right:40%;
+			
+			@include breakpoint('tablet'){
+				display: none;
+			}
+		}	
+		
 	}
 
 	.main-slider-row{
@@ -11,17 +29,22 @@
 		left:0;
 		right:0;
 
+		@include breakpoint('phoneH'){
+			position: static;
+			margin-bottom: 50px;
+		}
+
 		.main-slider-right-col{
 			
 			img.cannabis-move-img{
-				max-width: 120%;
-				margin-left: -10%;
+				// max-width: 120%;
+				// margin-left: -10%;
 				
 			}
 		}
 
 		.main-slider-container{
-			padding:80px 15px 40px 80px; 
+			padding:60px 80px 15px 80px; 
 			position: relative;
 			z-index: 3;
 			
@@ -35,11 +58,12 @@
 			}
 
 			@include breakpoint('tablet'){
-				padding:10px 0 0 40px;	
+				padding:60px 25px 25px 25px;	
 			}
 
 			@include breakpoint('phoneH'){
-				padding:0 15px 0 15px;	
+				padding:50px 25px 25px 25px;	
+					
 			}
 
 			.main-slider-sn{
@@ -60,11 +84,14 @@
 						}
 
 						@include breakpoint('tablet'){
-							font-size:30px;
+							font-size:45px;
 						}
 
+						@include breakpoint('phoneH'){
+							font-size:35px; 
+						}
 						@include breakpoint('phoneV'){
-							font-size:20px; 
+							font-size:28px; 
 						}
 					}
 					h1{
@@ -80,7 +107,7 @@
 						font-size: 18px;
 					}
 
-					@include breakpoint('tablet'){
+					@include breakpoint('phoneH'){
 						& > div{
 							display: none;
 						}
@@ -105,23 +132,22 @@
 
 		.main-slider-right-col{
 			position: relative;
-
-			img.dots-move-img{
-				top:50px !important;
-
-				@include breakpoint('tablet'){
-					display: none !important;
-				}
+			@include breakpoint('tablet'){
+				padding-top:40px; 
 			}
 
-			@media(max-width: 578px){
+			@media(max-width: 767px){
 				img.cannabis-move-img{
-					width:50%;
-					right:0 !important;
-					left: auto !important;
-					top:-40px !important;
-					z-index: 1;
-					margin-left: auto;
+					margin:auto;
+					max-width: 300px;
+					width:80%;
+				}
+			}
+			@include breakpoint('phoneV'){
+				img.cannabis-move-img{
+					
+					max-width: 200px;
+					width:90%;
 				}
 			}
 		}

@@ -46,6 +46,17 @@ get_header(); ?>
                         if ( $term && ! empty( $term->description ) ) {
                             echo '<div class="woocommerce-archive-description">' . wpautop( wp_kses_post( $term->description ) ) . '</div>';
                         }
+
+                        // Category image
+                        $thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
+                        $image = wp_get_attachment_url( $thumbnail_id );
+                        if ( $image ) {
+                            echo '<div class="cat-image-wrap-sn pb-5">';
+                            echo '<img src="' . $image . '" alt="' . $cat->name . '" class="img-fluid" />';
+                            echo '</div>';
+                        }
+
+
                     }
                     ?>
 

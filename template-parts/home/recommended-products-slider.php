@@ -28,16 +28,27 @@
 				function getPromotionalProductsSN($per_page = 8, $order = 'DESC'){
 
 				    $args = array(
-			            'posts_per_page' => $per_page, 
-			            'order' => $order ,
-				        'post_type' => array('product', 'product_variation'),
-				        'meta_key' => '_sale_price',
-				        'meta_value' => 0,
-				        'meta_compare' => '>=' ,
-				        'meta_type' => 'NUMERIC',
-				        'post__not_in'   => wc_get_featured_product_ids(),
-			        );
-			        return $onSaleProducts = new WP_Query( $args );
+					    'posts_per_page' => $per_page, 
+					    'order' => $order,
+					    'post_type' => array('product', 'product_variation'),
+					    'post__not_in' => wc_get_featured_product_ids(),
+					    'tax_query' => array(
+					        array(
+					            'taxonomy' => 'product_tag',
+					            'field' => 'slug',
+					            'terms' => 'new-drop',
+					            /*
+								** Filtrowanie po ID
+					            */ 
+					            // 'taxonomy' => 'product_tag',
+					            // 'field' => 'term_id',
+					            // 'terms' => 123 ( zastąpić id tagu) ,
+					        ),
+					    ),
+					);
+
+					return $newDropProducts = new WP_Query($args);
+
 
 				}
 

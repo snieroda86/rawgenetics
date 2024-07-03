@@ -271,6 +271,7 @@ require_once get_template_directory() . '/includes/woocommerce/global.php';
 
 require_once get_template_directory() . '/includes/woocommerce/WC_Product_SN.php';
 require_once get_template_directory() . '/includes/woocommerce/WC_Archive_SN.php';
+// require_once get_template_directory() . '/includes/woocommerce/WC_Account_SN.php';
 
 /**
  * Register Custom Navigation Walker
@@ -412,4 +413,92 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
 }
+
+// add_action('init', 'debug_registered_endpoints');
+
+// function debug_registered_endpoints() {
+//     global $wp_rewrite;
+
+//     // Ensure the global $wp_rewrite is set up
+//     if (!isset($wp_rewrite)) {
+//         return;
+//     }
+
+//     echo '<pre>';
+//     print_r($wp_rewrite->endpoints);
+//     echo '</pre>';
+// }
+
+
+/*
+** Premium doscount 
+*/
+
+function apply_premium_discount( $price, $product ) {
+    // Sprawdzenie, czy użytkownik jest zalogowany
+    if ( is_user_logged_in() ) {
+        // Pobranie bieżącego użytkownika
+        $current_user = wp_get_current_user();
+
+        // Sprawdzenie, czy użytkownik nie jest administratorem
+        if ( ! in_array( 'administrator', (array) $current_user->roles ) ) {
+            // Pobranie wszystkich zamówień użytkownika
+            $args = array(
+                'customer_id' => $current_user->ID,
+                'limit' => -1, 
+            );
+            $orders = wc_get_orders( $args );
+            $total_amount = 0;
+
+            // Obliczenie sumy wszystkich zamówień
+            foreach ( $orders as $order ) {
+                $total_amount += $order->get_total();
+            }
+
+            // Sprawdzenie, czy suma zamówień przekracza 100 zł
+            if ( $total_amount > 88 ) {
+                // Sprawdzenie, czy produkt ma ustawioną flagę premium_discount na TRUE
+                $is_premium_discount = get_field( 'premium_discount', $product->get_id() );
+
+                if ( $is_premium_discount ) {
+                    // Pobranie wartości pola premium_discount_amount z opcji ACF
+                    $discount_percentage = get_field( 'premium_discount_amount', 'option' );
+
+                    // Obliczenie obniżki cenowej w oparciu o procent z pola premium_discount_amount
+                    $discounted_price = $price - ( $price * ( $discount_percentage / 100 ) );
+
+                    // Zwrócenie nowej ceny
+                    return $discounted_price;
+                }
+            }
+        }
+    }
+
+    // Jeśli warunki nie są spełnione, zwracamy oryginalną cenę
+    return $price;
+}
+
+add_filter( 'woocommerce_product_get_price', 'apply_premium_discount', 10, 2 );
+add_filter( 'woocommerce_product_variation_get_price', 'apply_premium_discount', 10, 2 );
+
+
+/*
+** Premium doscount end
+*/
+
+// add_action('woocommerce_single_product_summary' , 'test');
+// function test(){
+// 	global $product;
+// 	$discount_percentage = get_field( 'premium_discount_amount', 'option' );
+// 	$is_premium_discount = get_field( 'premium_discount', $product->get_id() );
+// 	if($is_premium_discount){
+// 		echo 'To jest produkt premium'.'<br>';
+// 		echo 'Wysokość rabatu: '.$discount_percentage;
+// 	}else{
+// 		echo 'TO NIE JEST produkt premium';
+// 	}
+// }
+
+
+
 

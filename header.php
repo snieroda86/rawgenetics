@@ -27,7 +27,8 @@
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header">
-		
+		<!-- Ticker -->
+		<?php get_template_part('template-parts/global/ticker'); ?>
 		<!-- navbar -->
 		<nav class="navbar navbar-expand-lg navbar-light">
 		    <div class="container-lg">
