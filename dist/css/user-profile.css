@@ -1,0 +1,298 @@
+.up-site{
+	background: #080124;
+}
+
+.up-site .section-newsletter-sn{
+	background: transparent;
+}
+#user-profile-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	padding-top: 15px;
+	transition: 0.4s;
+}
+
+#user-profile-header .navbar-expand-lg .navbar-nav .nav-link{
+	padding-right: 20px;
+	padding-left: 20px;
+
+}
+.up-section-title{
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+
+#user-profile-header .nav-link:focus, #user-profile-header .nav-link:hover{
+	color:  #fff;
+}
+.up-sn-hero{
+	min-height: 300px;
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+.up-user-data-wrapper{
+	min-height: 500px;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	z-index: 2;
+}
+.up-user-data h1{
+	font-size: 50px;
+	color:  #fff;
+	margin-bottom: 15px;
+}
+
+
+.user-data-icon-col{
+	width: 50%;
+	margin-bottom: 20px;
+	max-width: 200px;
+}
+
+.user-rating span.fa-star{
+	margin-right: 3px;
+}
+.user-rating .fa-star{
+	color: #fff;
+}
+
+.btn-up-action-wrap{
+
+}
+
+.btn-up-action{
+	display: flex;
+	align-items: center;
+	padding: 5px 15px;
+	background: #34304B;
+	border-radius: 5px;
+	color:  #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	margin-right: 15px;
+}
+
+.user-rating .fa-star.star-checked {
+  color: orange;
+}
+
+.user-data-item-i{
+	width: 45px;
+}
+.user-data-item-text{
+	width: calc(100% - 45px);
+
+}
+.user-data-item-text h4{
+	color:  #fff;
+	font-size: 18px;
+	margin-bottom: 3px;
+
+}
+.user-data-item-text h5{
+	color:  #fff;
+	font-size: 16px;
+}
+
+.up-sn-hero::after{
+	content:  '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(26,32,46);
+background: linear-gradient(90deg, rgba(26,32,46,0.7343312324929971) 0%, rgba(2,15,18,0) 100%);
+}
+
+.up-site-main{
+	padding-top: 0 !important;
+}
+
+.up-logo-col{
+	width: 200px;
+	display: flex;
+	align-items: center;
+	padding-left: 25px;
+}
+
+.up-navbar-col{
+	width: calc(100% - 300px);
+	text-align: 'center';
+
+}
+
+.up-navbar-col li a{
+	color:  #fff;
+}
+.up-contact-col{
+	width: 200px;
+	padding-right: 25px;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.up-contact-col a{
+	color:  #fff;
+}
+
+.col-20-sn{
+	width:20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+
+}
+
+@media(max-width: 991px){
+	.col-20-sn{
+		width:33%;
+
+	}
+}
+
+@media(max-width: 576px){
+	.col-20-sn{
+		width:50%;
+
+	}
+}
+
+.badge-show-more-col{
+
+}
+.badge-show-more-col a{
+	display: block;
+	width: 100%;
+}
+
+.badge-show-more-item{
+	width: 100%;
+	padding-bottom: 100%;
+	border-radius: 50%;
+	background: #120F2D;
+	-webkit-box-shadow: inset 0px 0px 0px 3px rgba(62, 61, 109, 1);
+	-moz-box-shadow: inset 0px 0px 0px 3px rgba(62, 61, 109, 1);
+	box-shadow: inset 0px 0px 0px 3px rgba(62, 61, 109, 1);
+	position: relative;
+}
+.badge-show-more-count{
+	color:  #fff;
+	font-size:18px;
+	font-weight: 600;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+
+}
+.list-inline-sn{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: inline-flex;
+}
+.list-inline-sn li{
+	padding: 10px ;
+}
+
+.separator-sn{
+	height: 2px;
+	width: 100%;
+	background: #3E3D6D;
+}
+.badges-section{
+	position: relative;
+	z-index: 2;
+}
+
+.section-title-marker{
+	font-family: "Permanent Marker", cursive;
+	color: #fff;
+	font-size: 50px;
+}
+
+.cc-slide-inner{
+	position: relative;
+
+}
+
+.cc-card-bg img{
+	display: block;
+	margin: auto;
+}
+.cc-card-content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 30px ;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.4;
+}
+
+.cc-slide-img {
+	padding-bottom: 20px;
+	
+}
+.cc-slide-img  img{
+	max-width: 60%;
+	display: block;
+	margin: auto;
+}
+.cc-slide-name h5{
+	font-size: 17px;
+}
+.collections-carousel-wrap{
+	padding: 10px 15px;
+}
+.collections-carousel .slick-slide{
+	margin: 10px 15px;
+}
+
+.polygon-top{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none !important;
+}
+
+.polygon-bottom{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none !important;
+}
+.collections-carousel .slick-current .polygon-bottom , .collections-carousel .slick-current .polygon-top{
+	display: block !important;
+}
+
+.collections-carousel .slick-current{
+	transform: scale(1.1);
+	transition: 0.4s;
+}
+
+.collections-carousel .slick-current .cc-card-content{
+	opacity: 1;
+}
+
+.collections-carousel .slick-track{
+	padding: 25px 0;
+}

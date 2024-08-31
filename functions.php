@@ -54,6 +54,8 @@ if ( ! function_exists( 'web14devsn_setup' ) ) :
 			array(
 				'menu-primary' => esc_html__( 'Menu główne', 'web14devsn' ),
 				'menu-top-header' => esc_html__( 'Menu top', 'web14devsn' ),
+				'user-profile-menu' => esc_html__( 'User profile menu', 'web14devsn' ),
+
 
 				// 'menu-footer-1' => esc_html__( 'Menu footer 1', 'web14devsn' ),
 				// 'menu-footer-1' => esc_html__( 'Menu footer 1', 'web14devsn' ),
@@ -246,6 +248,8 @@ function web14devsn_scripts() {
 	wp_enqueue_style( 'web14devsn-style-slick',get_template_directory_uri().'/plugins/slick-slider/slick.css', array(), _S_VERSION );
 
 	wp_enqueue_style( 'web14devsn-style-css', get_template_directory_uri().'/dist/css/style.css', array(), _S_VERSION );
+
+	wp_enqueue_style( 'web14devsn-user-profile-css', get_template_directory_uri().'/dist/css/user-profile.css', date( 'dmYhi', filemtime( get_stylesheet_directory() . '/dist/css/user-profile.css' ) )  ); 
 
 	// Add js scripts
 	wp_enqueue_script( 'web14devsn-popper-js', get_template_directory_uri() . '/bootstrap/js/popper.min.js', array("jquery"), _S_VERSION, true );

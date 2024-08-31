@@ -59,7 +59,7 @@
 			        <div class="onsale-products-sn">
 			        <?php while ($getPromotionalProductsSN->have_posts()) : $getPromotionalProductsSN->the_post();  ?>
 			        	<div>
-			        		<?php  wc_get_template_part( 'content', 'product' );  ?>
+			        		<?php  wc_get_template_part( 'content', 'product_slide' );  ?>
 			        	</div>
 			                            
 			        <?php endwhile; ?>
