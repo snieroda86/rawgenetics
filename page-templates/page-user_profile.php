@@ -117,7 +117,7 @@ get_header('user_profile');
 		</section>
 
 		<section class="pt-80 badges-section">
-			<div class="container">
+			<div class="container position-relative">
 				<div class="row gy-5 gx-5">
 					<div class="col-md-6">
 						<h2 class="up-section-title text-white pb-4">
@@ -243,12 +243,18 @@ get_header('user_profile');
 						<div class="separator-sn"></div>
 					</div>
 				</div>
+
+				<!-- Alien planet background -->
+				<div class="ap-bg-img-wrap">
+					<img class="ap-bg-img img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/bg-collection.png" alt="Alien planet">	
+				</div>
+				
 			</div>
 			
 		</section>
 
 		<!-- Collections slider -->
-		<section class="pt-80">
+		<section class="pt-80 position-relative z-3" >
 			<h2 class="mb-4 text-center section-title-marker">Collections</h2>
 
 			<div class="collections-carousel-wrap">
@@ -507,6 +513,111 @@ get_header('user_profile');
 
 					
 					
+				</div>
+			</div>
+		</section>
+
+		<!-- Collect rewards -->
+		<section class="pt-100">
+			<div class="container">
+				<div class="row g-5 pb-5">
+					<div class="col-md-6">
+						<h2 class="mb-4  section-title-marker">COLLECT REWARDS</h2>
+						<p class="text-white mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beat</p>
+						<a href="#" class="btn-main-web14">
+						View Collection</a>
+					</div>
+					<div class="col-md-6 text-end">
+						<div class="cr-product-img position-relative z-3 ms-auto">
+							<img class="img-fluid cr-product-img-bg" src="<?php echo PATH_SN ?>/uploads/user-profile/cr-sun.png" alt="Sun">
+							<div class="cr-product-img-item-wrap  z-4">
+								<img src="<?php echo PATH_SN ?>/uploads/user-profile/skarb.png" alt="Treasure" class="cr-product-img-item img-fluid" />
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Diadem -->
+				<div class="row">
+					<div class="col-12">
+						<img src="<?php echo PATH_SN ?>/uploads/user-profile/diadem.png" alt="Diadem" class="cr-diadem img-fluid" />
+					</div>
+				</div>
+
+				<div class="pt-80"></div>
+				<!-- Timeline -->
+				<div class="row pb-60">
+					<div class="col-12">
+						<div class="up-timeline-wrap">
+							<div class="tm-items-wrapper">
+
+								<!-- Step item -->
+								<div class="tm-badge-wrap-item">
+									<div class="tm-item-badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+									</div>
+									<!-- Step circle -->
+									<div class="tm-item-circle-step">
+										1
+									</div>
+								</div>
+
+								<!-- Step item -->
+								<div class="tm-badge-wrap-item">
+									<div class="tm-item-badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+									</div>
+									<!-- Step circle -->
+									<div class="tm-item-circle-step">
+										2
+									</div>
+								</div>
+
+								<!-- Step item -->
+								<div class="tm-badge-wrap-item">
+									<div class="tm-item-badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+									</div>
+									<!-- Step circle -->
+									<div class="tm-item-circle-step">
+										3
+									</div>
+								</div>
+
+								<!-- Step item -->
+								<div class="tm-badge-wrap-item">
+									<div class="tm-item-badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+									</div>
+									<!-- Step circle -->
+									<div class="tm-item-circle-step">
+										4
+									</div>
+								</div>
+
+								<!-- Step item -->
+								<div class="tm-badge-wrap-item">
+									<div class="tm-item-badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+									</div>
+									<!-- Step circle -->
+									<div class="tm-item-circle-step">
+										5
+									</div>
+								</div>
+
+
+							</div>
+							<div class="tm-line-wrapper position-relative">
+								<div class="tm-line-full">
+								</div>
+								<div class="tm-line-steps">
+								</div>
+							</div>
+
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
