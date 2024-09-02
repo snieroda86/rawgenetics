@@ -520,7 +520,7 @@ get_header('user_profile');
 		<!-- Collect rewards -->
 		<section class="pt-100">
 			<div class="container">
-				<div class="row g-5 pb-5">
+				<div class="row g-5 position-relative z-3">
 					<div class="col-md-6">
 						<h2 class="mb-4  section-title-marker">COLLECT REWARDS</h2>
 						<p class="text-white mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beat</p>
@@ -529,7 +529,7 @@ get_header('user_profile');
 					</div>
 					<div class="col-md-6 text-end">
 						<div class="cr-product-img position-relative z-3 ms-auto">
-							<img class="img-fluid cr-product-img-bg" src="<?php echo PATH_SN ?>/uploads/user-profile/cr-sun.png" alt="Sun">
+							<img class="img-fluid cr-product-img-bg" src="<?php echo PATH_SN ?>/uploads/user-profile/cr-sun-gr.png" alt="Sun">
 							<div class="cr-product-img-item-wrap  z-4">
 								<img src="<?php echo PATH_SN ?>/uploads/user-profile/skarb.png" alt="Treasure" class="cr-product-img-item img-fluid" />
 							</div>
@@ -539,9 +539,14 @@ get_header('user_profile');
 				</div>
 
 				<!-- Diadem -->
-				<div class="row">
-					<div class="col-12">
-						<img src="<?php echo PATH_SN ?>/uploads/user-profile/diadem.png" alt="Diadem" class="cr-diadem img-fluid" />
+				<div class="row diadem-row">
+					<div class="col-12 diadem-wrap">
+						<img src="<?php echo PATH_SN ?>/uploads/user-profile/diadem-gr
+					.png" alt="Diadem" class="cr-diadem img-fluid" />
+					</div>
+					<div class="col-12 position-relative z-2">
+						<img src="<?php echo PATH_SN ?>/uploads/user-profile/diadem
+					.png" alt="Diadem" class="cr-diadem img-fluid" />
 					</div>
 				</div>
 
@@ -588,7 +593,7 @@ get_header('user_profile');
 								<!-- Step item -->
 								<div class="tm-badge-wrap-item">
 									<div class="tm-item-badge">
-										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/treasure-small.png" alt="Badge">
 									</div>
 									<!-- Step circle -->
 									<div class="tm-item-circle-step">
@@ -607,6 +612,28 @@ get_header('user_profile');
 									</div>
 								</div>
 
+								<!-- Step item -->
+								<div class="tm-badge-wrap-item">
+									<div class="tm-item-badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+									</div>
+									<!-- Step circle -->
+									<div class="tm-item-circle-step">
+										6
+									</div>
+								</div>
+
+								<!-- Step item -->
+								<div class="tm-badge-wrap-item">
+									<div class="tm-item-badge">
+										<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="Badge">
+									</div>
+									<!-- Step circle -->
+									<div class="tm-item-circle-step">
+										7
+									</div>
+								</div>
+
 
 							</div>
 							<div class="tm-line-wrapper position-relative">
@@ -619,6 +646,470 @@ get_header('user_profile');
 						</div>
 					</div>
 				</div>
+
+				<!-- Flip cards grid -->
+
+				<div class="row flip-cards-row">
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card -->
+					<div class="col-card-item">
+						<div class="card-item">
+							<div class="scene scene--card">
+							  <div class="card-item-inner">
+							    <div class="card__face card__face--front">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-front.png" alt="card front" class="card-grid-bg-front img-fluid" />
+							    		<div class="card-face-content d-flex align-items-center">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+							    			
+							    		</div>
+							    	</div>
+							    	
+							    </div>
+							    <div class="card__face card__face--back" style="background-image: url(<?php echo PATH_SN ?>/uploads/user-profile/card-back-bg.png);background-size: cover;background-position: center center;">
+							    	<div class="card-face-inner">
+							    		<img src="<?php echo PATH_SN ?>/uploads/user-profile/card-grid-bg-back.png" alt="card front" class="card-grid-bg-back img-fluid" />
+							    		<div class="card-face-content d-flex align-items-end">
+							    			<div class="text-center">
+							    				<h5 class="text-white font-marker">CARMEL APPLE CRISP</h5>	
+							    			</div>
+
+							    			<!-- Badge -->
+							    			
+							    			<img src="<?php echo PATH_SN ?>/uploads/user-profile/badge-timeline.png" alt="" class="card-badge-small badge-card-small img-fluid" />
+							    			
+							    			
+							    		</div>
+							    	</div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- Flip cards grid end -->
+
 			</div>
 		</section>
 
@@ -701,6 +1192,29 @@ get_header('user_profile');
 			 
 			  ]
 			});
+
+
+			// Flip card
+			var cards = document.querySelectorAll('.card-item-inner');
+			cards.forEach(function(card){
+				card.addEventListener( 'click', function() {
+				  card.classList.toggle('is-flipped');
+				});
+			});
+
+			
+			// Flip card end
+
+			// Card dynamic height 
+
+		    var imgHeight = $('.card-item-inner img').height() + 12 + "px";
+		    
+		    $('.card-item-inner').css('height', imgHeight);
+
+		    $(window).resize(function() {
+		      var imgHeight = $('.card-item-inner img').height() + 12 + "px";
+		      $('.card-item-inner').css('height', imgHeight);
+		    });
 
 		  
 		});

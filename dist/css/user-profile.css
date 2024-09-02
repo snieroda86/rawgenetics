@@ -2,6 +2,10 @@
 	background: #080124;
 }
 
+.font-marker{
+	font-family: "Permanent Marker", cursive;
+}
+
 .up-site .section-newsletter-sn{
 	background: transparent;
 }
@@ -332,8 +336,8 @@ background: linear-gradient(90deg, rgba(8,1,36,0.16010154061624648) 0%, rgba(8,1
 	left:0 ;
 	right:0 ;
 	bottom:0 ;
-	background: rgb(8,1,36);
-background: radial-gradient(circle, rgba(8,1,36,0) 0%, rgba(8,1,36,1) 100%);
+	/*background: rgb(8,1,36);
+background: radial-gradient(circle, rgba(8,1,36,0) 0%, rgba(8,1,36,1) 100%);*/
 }
 .cr-product-img-bg{
 
@@ -384,7 +388,148 @@ background: radial-gradient(circle, rgba(8,1,36,0) 0%, rgba(8,1,36,1) 100%);
 	z-index: 3;
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 .pb-60{
 	padding-bottom: 60px !important;
 }
+
+.diadem-wrap{
+	position: relative;
+	margin-bottom: -20px;
+}
+
+.diadem-wrap::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left:0 ;
+	right:0 ;
+	bottom:0 ;
+	background: rgb(8,1,36);
+	background: radial-gradient(circle, rgba(8,1,36,0) 0%, rgba(8,1,36,1) 100%);
+
+}
+
+.diadem-row{
+	margin-top: -250px;
+}
+
+.col-card-item{
+	width: 20%;
+	padding: 10px 15px;
+}
+
+@media(max-width: 1040px){
+	.col-card-item{
+		width: 25%;
+	}
+}
+
+@media(max-width: 991px){
+	.col-card-item{
+		width: 33%;
+	}
+}
+@media(max-width: 767px){
+	.flip-cards-row{
+		flex-wrap: nowrap !important;
+		overflow-x: auto;
+		padding: 30px 0;
+	}
+	.col-card-item{
+		width: auto;
+	}
+}
+
+
+/*FLip card */
+
+.scene {
+  width: 100%;
+  height: auto;
+  perspective: 900px;
+}
+
+.card-item-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-item-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 5px;
+
+
+}
+
+.card__face--front {
+  
+  border: 2px solid rgb(63, 62 ,109);
+}
+
+.card__face--back {
+  
+  transform: rotateY(180deg);
+  border: 2px solid transparent;
+  position: relative;
+ 
+
+}
+.card-grid-bg-back{
+	 /*filter: brightness(30%);*/
+	 /*filter: invert(1);*/
+}
+
+.card__face--back::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left:0 ;
+	right:0 ;
+	bottom:0 ;
+	background: rgba(0,0,0,0.7);
+	
+}
+
+.card-face-inner{
+	position: relative;
+	z-index: 4;
+
+}
+.card-face-content{
+	position: absolute;
+	top: 0;
+	left:0 ;
+	right:0 ;
+	bottom:0 ;
+	padding: 25px;
+
+}
+
+.badge-card-small{
+	position: absolute;
+	top: 25px;
+	right: 25px;
+
+}
+.badge-card-small img{
+	width: 35px;
+}
+
+/*Flip card end*/
