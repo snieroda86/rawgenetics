@@ -188,7 +188,7 @@ get_header('user_profile');
 								</div>
 								<!-- Item -->
 								<div class="col-20-sn badge-show-more-col">
-									<a href="#">
+									<a href="#" data-bs-toggle="modal" data-bs-target="#popupRaw1">
 										<div class="badge-show-more-item">
 											<div class="badge-show-more-count">
 												+33
@@ -227,7 +227,7 @@ get_header('user_profile');
 							</ul>
 						</div>
 						<div class="dg-image-list-collection d-flex justify-content-end pt-3">
-							<a href="" class="dg-collection-more-link d-flex align-items-center">
+							<a href="javascript:void(0)" class="dg-collection-more-link d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#popupRaw2">
 								<span class="me-3 text-white">View collection</span>
 								<span>
 									<svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 320 512"><path fill="#ffffff" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
@@ -527,7 +527,7 @@ get_header('user_profile');
 						<a href="#" class="btn-main-web14">
 						View Collection</a>
 					</div>
-					<div class="col-md-6 text-end">
+					<div class="col-md-6 text-center text-md-end">
 						<div class="cr-product-img position-relative z-3 ms-auto">
 							<img class="img-fluid cr-product-img-bg" src="<?php echo PATH_SN ?>/uploads/user-profile/cr-sun-gr.png" alt="Sun">
 							<div class="cr-product-img-item-wrap  z-4">
@@ -1113,6 +1113,455 @@ get_header('user_profile');
 			</div>
 		</section>
 
+		<!-- ############POPUPS############## -->
+		<!-- Popup 1 -->
+		<div class="modal fade popup-sn-1" id="popupRaw1" tabindex="-1" aria-labelledby="popupRaw1Label" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-xl-down">
+		    <div class="modal-content">
+		      <div class="modal-header border-0">
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+		        	<svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 384 512"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		         <div class="text-center popup-sn-1-image py-4">
+		         	<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/skarb.png" alt="Skarb">
+		         </div>
+		         <div class="py-3 mw-800">
+		         	<h3 class="mb-4  section-title-marker text-center popup-heading">COLLECT REWARDS</h3>
+		         	<p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		         	tempor incididunt ut labore et dolore magna aliqua.</p>
+		         </div>
+		         <div class="pb-5 text-center">
+		         	<a href="#" class="btn-main-web14" >
+						View Collection
+					</a>
+		         </div>
+
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Popup 1 end -->
+
+		<!-- Popup 2 -->
+
+		<div class="modal fade popup-sn-1" id="popupRaw2" tabindex="-1" aria-labelledby="popupRaw2Label" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-xl-down">
+		    <div class="modal-content">
+		      <div class="modal-header border-0">
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+		        	<svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 384 512"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		       	 <div class="modal-inner-sn px-4 py-2">
+		       	 	<div class="row g-5">
+		       			<div class="col-lg-4">
+		       				<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/popup2ftr.jpg" alt="Product">
+		       			</div>
+		       			<div class="col-lg-8 popup-2-right-col">
+		       				<h3 class="popup-heading-small section-title-marker text-white mb-4">Lorem ipusm</h3>
+		       				<div class="mb-4">
+		       					<div class="icon-text-item d-flex">
+		       						<div class="iti-icon">
+		       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+		       						</div>
+		       						<div class="iti-text">
+		       							<h5 class="unique-nft-tokes text-white fs-18">
+		       								0X6548655448844848478484648488448...444844848448488
+		       							</h5>
+		       							<p class="popup-text-opc">
+		       								Lorem ipsum dolor sit amet, consectetur adipisicing elit
+		       							</p>
+		       						</div>
+
+		       					</div>
+		       				</div>
+		       				<div class="mb-4">
+		       					<p class="popup-text-opc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		       					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		       					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		       					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		       					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		       					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		       				</div>
+
+		       				<!-- Icon text items container -->
+		       				<div class="iti-container pt-3">
+		       					
+		       					<!-- row -->
+		       					<diw class="row g-4 mb-4">
+
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+
+		       					</diw>
+		       					<!-- row -->
+		       					<diw class="row g-4 mb-4">
+
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+
+		       					</diw>
+
+		       					<!-- row -->
+		       					<diw class="row g-4 mb-4">
+
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+
+		       					</diw>
+
+		       					<!-- row -->
+		       					<diw class="row g-4 mb-4">
+
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="col-lg-6">
+		       							<div class="icon-text-item iti-bordered d-flex">
+				       						<div class="iti-icon">
+				       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/bin-star.png" alt="Star">
+				       						</div>
+				       						<div class="iti-text">
+				       							<h5 class="unique-nft-tokes text-white fs-18 text-uppercase">
+				       								Lorem ipsum
+				       							</h5>
+				       							<p class="popup-text-opc">
+				       								Lorem ipsum dolor sit amet
+				       							</p>
+				       						</div>
+
+				       					</div>
+		       						</div>
+
+		       					</diw>
+
+		       				</div>
+
+
+		       				<!-- Badges container -->
+		       				<div class="iti-badges-container py-5">
+		       					<h3 class="popup-heading-small section-title-marker text-white mb-4">Badges</h3>
+		       					<div class="row g-4">
+
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge1.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge2.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge3.png" alt="Star">
+		       							</a>
+		       						</div>
+
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge1.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge2.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge3.png" alt="Star">
+		       							</a>
+		       						</div>
+
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge1.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge2.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge3.png" alt="Star">
+		       							</a>
+		       						</div>
+
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge1.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge2.png" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Item -->
+		       						<div class="iti-badge-col">
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge3.png" alt="Star">
+		       							</a>
+		       						</div>
+
+
+
+
+
+		       					</div>
+		       				</div>
+
+
+
+		       			</div>
+		       		</div>
+
+		       		<!-- Slider carousel -->
+		       		<div class="row g-5">
+		       			<div class="col-12 pt-3 pb-5">
+		       				<h3 class="popup-heading-small section-title-marker text-white text-center mb-4">Digital collectibles</h3>
+
+		       				<!-- Slider carousel -->
+		       				<div class="popup-raw-2-carousel-wrap">
+		       					<div class="popup-raw-2-carousel dots-squared">
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide1.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide2.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide1.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide2.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide1.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide2.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide1.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide2.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide1.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide2.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide1.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide2.jpg" alt="Star">
+		       							</a>
+		       						</div>
+		       						<!-- Slide -->
+		       						<div>
+		       							<a href="#">
+		       								<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/slide1.jpg" alt="Star">
+		       							</a>
+		       						</div>
+
+		       					</div>
+
+		       					<!-- Custom arrows -->
+		       					<div class="popup-raw-2-carousel-arrows">
+		       						<div class="p2-arrow-left">
+		       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/chevron-left.svg" alt="Left">
+		       						</div>
+		       						<div class="p2-arrow-right">
+		       							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/chevron-right.svg" alt="Right">
+		       						</div>
+		       					</div>
+		       				</div>
+		       				<!-- Slider end -->
+		       			</div>
+		       		</div>
+
+
+		       	 </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- POpup 2 end -->
+
+
+
+
+
+
 	</main><!-- #main -->
 
 
@@ -1215,6 +1664,66 @@ get_header('user_profile');
 		      var imgHeight = $('.card-item-inner img').height() + 12 + "px";
 		      $('.card-item-inner').css('height', imgHeight);
 		    });
+
+
+		    /*
+			** Popup raw 2 slider carousel
+		    */
+
+		    $('.popup-raw-2-carousel').slick({
+			  dots: true,
+			  // arrows:false,
+			  infinite: true,
+			  speed: 300,
+			  slidesToShow: 6,
+			  slidesToScroll: 1,
+			  prevArrow: $('.p2-arrow-left') ,
+			  nextArrow: $('.p2-arrow-right') ,
+			  responsive: [
+			    {
+			      breakpoint: 1024,
+			      settings: {
+			        slidesToShow: 4,
+			        slidesToScroll: 1,
+			        infinite: true,
+			        dots: true
+			      }
+			    },
+			    {
+			      breakpoint: 900,
+			      settings: {
+			        slidesToShow: 3,
+			        slidesToScroll: 1
+			      }
+			    },
+			     {
+			      breakpoint: 760,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 1
+			      }
+			    },
+			    {
+			      breakpoint: 480,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    }
+			    
+			  ]
+			});
+
+			// Refresh slick on modal open
+			$('#popupRaw2').on('shown.bs.modal', function () {
+			    $('.popup-raw-2-carousel').slick('setPosition');
+			});
+
+
+
+
+
+
 
 		  
 		});
