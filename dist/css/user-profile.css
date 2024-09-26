@@ -740,3 +740,74 @@ background: radial-gradient(circle, rgba(8,1,36,0) 0%, rgba(8,1,36,1) 100%);*/
 .dots-squared .slick-dots li.slick-active button{
 	background: #fff;
 }
+
+/*Popup 3 - slide left*/
+#popupRaw3 {
+    width: 90%; 
+    max-width: 1300px;
+    height: 90%; 
+    position: fixed; 
+    z-index: 99;
+    top: 5%;
+    color: white;
+    transition: left 0.5s ease, transform 0.5s ease;
+    border-radius: 0;
+    border: 3px solid #605B91;
+    box-shadow: 0px 3px 80px #BF9FFF66;
+    background: transparent radial-gradient(closest-side at 50% 50%, #07051C 0%, #19153B 100%) 0% 0% no-repeat padding-box;
+}
+
+
+#popupRaw3.open {
+    left: 0; 
+}
+
+ .popupRaw3-inner{
+ 	position: relative;
+ 	padding: 35px;
+ 	min-height: 100%;
+ 	/*overflow-y: scroll;*/
+ }
+
+ #popupRaw3-trigger{
+ 	cursor: pointer;
+ 	position: absolute;
+ 	top:100px;
+ 	right: -83px;
+ 	width: 80px;
+ 	height: 300px;
+ 	background: red;
+ 	z-index: 99;
+ 	border-width: 3px 3px 3px 0;
+	border-style: solid;
+	border-color: #605B91;
+ 	background: #251D5E;
+ 	padding: 18px 8px;
+ }
+
+ .popupRaw3-content{
+ 	overflow-y: auto;
+ 	min-height: 100%;
+ }
+.p3-trigger-img{
+	height: 47px;
+}
+
+.popupRaw3-trigger-inner{
+	height: 100%;
+	/*display: flex;
+	flex-direction: column;
+	justify-content: space-between;*/
+}
+
+.p3-trigger-heading{
+	height: calc(100% - 94px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.p3-trigger-heading h4{
+	font-size: 28px;
+	transform: rotate(270deg);
+	text-align: center;
+}

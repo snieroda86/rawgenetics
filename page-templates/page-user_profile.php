@@ -525,7 +525,7 @@ get_header('user_profile');
 						<h2 class="mb-4  section-title-marker">COLLECT REWARDS</h2>
 						<p class="text-white mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beat</p>
 						<a href="#" class="btn-main-web14">
-						View Collection</a>
+						View Collection </a>
 					</div>
 					<div class="col-md-6 text-center text-md-end">
 						<div class="cr-product-img position-relative z-3 ms-auto">
@@ -1130,7 +1130,7 @@ get_header('user_profile');
 		         <div class="py-3 mw-800">
 		         	<h3 class="mb-4  section-title-marker text-center popup-heading">COLLECT REWARDS</h3>
 		         	<p class="text-white text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		         	tempor incididunt ut labore et dolore magna aliqua.</p>
+		         	tempor incididunt ut labore et dolore magna aliqua. hhh</p>
 		         </div>
 		         <div class="pb-5 text-center">
 		         	<a href="#" class="btn-main-web14" >
@@ -1558,6 +1558,41 @@ get_header('user_profile');
 		<!-- POpup 2 end -->
 
 
+		<!-- Popup 3 - slide modal -->
+		<div class="popupRaw3-wrapper" id="popupRaw3">
+			<div class="popupRaw3-inner">
+
+				<div class="popupRaw3-content">
+					<h2>Sidebar</h2>
+    			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    			    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    			    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    			    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    			    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    			    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+				</div>
+				<div id="popupRaw3-trigger">
+					<div class="popupRaw3-trigger-inner">
+						<div class="p3-trigger-img">
+							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge-trigger-top.png" alt="Left">
+						</div>
+						<div class="p3-trigger-heading">
+							<h4 class="text-white section-title-marker">Badges</h4>
+						</div>
+
+						<div class="p3-trigger-img">
+							<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge-trigger-bottom.png" alt="Left">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<!-- Popup 3 - slide modal end -->
+
+
+
 
 
 
@@ -1719,9 +1754,30 @@ get_header('user_profile');
 			    $('.popup-raw-2-carousel').slick('setPosition');
 			});
 
+			// Popup 3 - slide left 
 
+			var popupRaw3 = $('#popupRaw3');
+		    var popupRaw3Width = popupRaw3.outerWidth();
 
+		    popupRaw3.css('left', -popupRaw3Width + 'px');
 
+		    $('#popupRaw3-trigger').on('click', function() {
+		        if (popupRaw3.hasClass('open')) {
+		            popupRaw3.css('left', -popupRaw3Width + 'px');
+		        } else {
+		            popupRaw3.css('left', 0);
+		            // popup.css('transform', 'translateX(-50%)');
+		        }
+		        popupRaw3.toggleClass('open');
+		    });
+
+		    $(window).resize(function() {
+		        popupRaw3Width = popupRaw3.outerWidth();
+		        if (!popupRaw3.hasClass('open')) {
+		            popupRaw3.css('left', -popupRaw3Width + 'px');
+		        }
+		    });
+			// Popup 3 end
 
 
 
