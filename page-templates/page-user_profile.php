@@ -1562,14 +1562,450 @@ get_header('user_profile');
 		<div class="popupRaw3-wrapper" id="popupRaw3">
 			<div class="popupRaw3-inner">
 
+				<!-- Mobile close btn -->
+				<div id="popupRaw3-mobile-close-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 384 512"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+				</div>
+
 				<div class="popupRaw3-content">
-					<h2>Sidebar</h2>
-    			    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    			    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    			    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    			    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    			    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    			    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>	
+					
+					<div class="container-lg">
+						<div class="row g-5">
+							<div class="col-md-6">
+								<div class="popupRaw3-left-col-content">
+									<div class="p3r-inner">
+										<!-- Group -->
+										<div class="p3r-inner-group">
+											<h4 class="text-white section-title-marker fs-28">Badges</h4>	
+											<p class="popup-text-opc">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+											<div class="badges-opc-container pt-4">
+												<div class="row">
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<!-- group end -->
+										<!-- Group -->
+										<div class="p3r-inner-group">
+											<h4 class="text-white section-title-marker fs-28">Badges</h4>	
+											<p class="popup-text-opc">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+											<div class="badges-opc-container pt-4">
+												<div class="row">
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<!-- group end -->
+										<!-- Group -->
+										<div class="p3r-inner-group">
+											<h4 class="text-white section-title-marker fs-28">Badges</h4>	
+											<p class="popup-text-opc">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+
+											<div class="badges-opc-container pt-4">
+												<div class="row">
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-1.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-2.png" >
+														</div>
+													</div>
+													<!-- item -->
+													<div class="col-xl-2 col-lg-3 col-md-3 col-sm-2 col-4">
+														<div class="badge-item-wrap-p3">
+															<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/b-opc-3.png" >
+														</div>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<!-- group end -->
+
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-md-6 p3-right-col-6">
+								<div class="p3-inner-scrolled">
+									<div class="pb-5 text-center p3-right-ftr-img">
+										<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/crab.png" >
+									</div>
+									<div>
+										<h4 class="text-white section-title-marker fs-28 text-center mb-5">Lorem ipsum</h4>
+										<div class="p3-right-ftr-box">
+											<h5 class="text-white text-center mb-4">Sed ut perspiciatis unde</h5>
+
+											<div>
+												<!-- item -->
+												<div class="p3-text-icon-item">
+													<div class="p3-text-icon-icon">
+														<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge-icon-text-p3.png" >
+													</div>
+													<div class="p3-text-icon-text">
+														<h6 class="text-white">Sed ut perspiciatis</h6>
+														<p class="popup-text-opc fs-16">Sed ut perspiciatis</p>
+													</div>
+												</div>
+
+												<!-- item -->
+												<div class="p3-text-icon-item">
+													<div class="p3-text-icon-icon">
+														<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge-icon-text-p3.png" >
+													</div>
+													<div class="p3-text-icon-text">
+														<h6 class="text-white">Sed ut perspiciatis</h6>
+														<p class="popup-text-opc fs-16">Sed ut perspiciatis</p>
+													</div>
+												</div>
+
+												<!-- item -->
+												<div class="p3-text-icon-item">
+													<div class="p3-text-icon-icon">
+														<img class="img-fluid" src="<?php echo PATH_SN ?>/uploads/user-profile/popup/badge-icon-text-p3.png" >
+													</div>
+													<div class="p3-text-icon-text">
+														<h6 class="text-white">Sed ut perspiciatis</h6>
+														<p class="popup-text-opc fs-16">Sed ut perspiciatis</p>
+													</div>
+												</div>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
 				</div>
 				<div id="popupRaw3-trigger">
 					<div class="popupRaw3-trigger-inner">
@@ -1770,6 +2206,12 @@ get_header('user_profile');
 		        }
 		        popupRaw3.toggleClass('open');
 		    });
+
+		    // Mobirle close btn
+		    $('#popupRaw3-mobile-close-btn').on('click', function(){
+		    	popupRaw3.css('left', -popupRaw3Width + 'px');
+		    	popupRaw3.removeClass('open');
+		    })
 
 		    $(window).resize(function() {
 		        popupRaw3Width = popupRaw3.outerWidth();
